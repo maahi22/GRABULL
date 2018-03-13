@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGe-aC-4rb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder1" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-Ql-1Us">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
@@ -34,10 +34,10 @@
                                                         <color key="backgroundColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-Nj-z9n">
-                                                        <rect key="frame" x="29" y="149" width="325" height="97"/>
+                                                        <rect key="frame" x="29" y="149" width="325" height="63.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder2" translatesAutoresizingMaskIntoConstraints="NO" id="JA0-ZC-QM3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="97"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="63.5"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-Lb-VAR">
-                                                <rect key="frame" x="0.0" y="268" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="234.5" width="375" height="50"/>
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2RG-RC-l7h">
                                                         <rect key="frame" x="306" y="9" width="51" height="31"/>
@@ -84,8 +84,33 @@
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gKu-oQ-7vm">
-                                                <rect key="frame" x="0.0" y="320" width="375" height="326"/>
+                                                <rect key="frame" x="0.0" y="286.5" width="375" height="359.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="82" id="u09-WG-9pr" customClass="CartCell" customModule="GRABULL" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u09-WG-9pr" id="5LH-UF-N6J">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tbl4" translatesAutoresizingMaskIntoConstraints="NO" id="hDa-BH-boY">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="hDa-BH-boY" firstAttribute="top" secondItem="5LH-UF-N6J" secondAttribute="top" id="0f3-LR-Ybc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hDa-BH-boY" secondAttribute="bottom" id="IgX-Bm-WyG"/>
+                                                                <constraint firstItem="hDa-BH-boY" firstAttribute="leading" secondItem="5LH-UF-N6J" secondAttribute="leading" id="anm-eT-mM1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hDa-BH-boY" secondAttribute="trailing" id="vyN-yQ-l7N"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="pag-Lz-jA1" id="5Y1-9S-3sC"/>
+                                                    <outlet property="delegate" destination="pag-Lz-jA1" id="z5S-w4-IAl"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,7 +142,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5gW-Nt-4Ek" secondAttribute="trailing" id="130-bn-iks"/>
-                            <constraint firstItem="iGe-aC-4rb" firstAttribute="height" secondItem="Cf8-7d-M6u" secondAttribute="height" multiplier="0.4" id="2cu-kT-Dir"/>
+                            <constraint firstItem="iGe-aC-4rb" firstAttribute="height" secondItem="Cf8-7d-M6u" secondAttribute="height" multiplier="0.35" id="2cu-kT-Dir"/>
                             <constraint firstItem="5gW-Nt-4Ek" firstAttribute="leading" secondItem="rev-ih-lkG" secondAttribute="leading" id="3uD-Z6-OGg"/>
                             <constraint firstItem="5gW-Nt-4Ek" firstAttribute="top" secondItem="rev-ih-lkG" secondAttribute="top" id="Ybz-d6-bhs"/>
                             <constraint firstItem="rev-ih-lkG" firstAttribute="bottom" secondItem="5gW-Nt-4Ek" secondAttribute="bottom" id="rAH-Qy-imF"/>
@@ -133,5 +158,6 @@
     <resources>
         <image name="placeholder1" width="214" height="116"/>
         <image name="placeholder2" width="142" height="43"/>
+        <image name="tbl4" width="356" height="90"/>
     </resources>
 </document>

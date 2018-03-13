@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FiltersVC-->
+        <!--Filter-->
         <scene sceneID="9e6-jG-koe">
             <objects>
                 <viewController storyboardIdentifier="FiltersVC" id="KZ9-GN-FgH" customClass="FiltersVC" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,10 +20,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dnX-Am-KPe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Filter" id="4zQ-9h-iTk">
+                        <barButtonItem key="leftBarButtonItem" title="X" id="f7A-bG-f6t">
+                            <connections>
+                                <action selector="cancel:" destination="KZ9-GN-FgH" id="aKS-bU-gzW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89R-Aw-t1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="-245"/>
+            <point key="canvasLocation" x="902" y="-269"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G0b-XV-x8A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nIn-9z-Tlo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RW1-0p-p8W">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KZ9-GN-FgH" kind="relationship" relationship="rootViewController" id="sUt-Ch-tMR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4w-ld-4kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="-269"/>
         </scene>
     </scenes>
 </document>

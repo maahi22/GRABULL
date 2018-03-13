@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F177CB2205839A8006FA4AF /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CB1205839A8006FA4AF /* CheckOutVC.swift */; };
+		0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CB4205839DA006FA4AF /* PaymentVC.swift */; };
+		0F177CB7205839EA006FA4AF /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F177CB6205839EA006FA4AF /* Payment.storyboard */; };
+		0F177CB9205839FD006FA4AF /* CheckOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F177CB8205839FD006FA4AF /* CheckOut.storyboard */; };
+		0F177CBC20583A5F006FA4AF /* PaymentType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F177CBB20583A5F006FA4AF /* PaymentType.storyboard */; };
+		0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */; };
+		0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBF20583FAC006FA4AF /* CartCell.swift */; };
 		189D6DF720579BD000AA7ECA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF620579BD000AA7ECA /* Login.storyboard */; };
 		189D6DF920579BEA00AA7ECA /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF820579BEA00AA7ECA /* Registration.storyboard */; };
 		189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D6DFA20579C3100AA7ECA /* LoginVC.swift */; };
@@ -63,6 +70,13 @@
 
 /* Begin PBXFileReference section */
 		07794C966096D7CEA7514FF0 /* Pods-GRABULL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRABULL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GRABULL/Pods-GRABULL.debug.xcconfig"; sourceTree = "<group>"; };
+		0F177CB1205839A8006FA4AF /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
+		0F177CB4205839DA006FA4AF /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		0F177CB6205839EA006FA4AF /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		0F177CB8205839FD006FA4AF /* CheckOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckOut.storyboard; sourceTree = "<group>"; };
+		0F177CBB20583A5F006FA4AF /* PaymentType.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentType.storyboard; sourceTree = "<group>"; };
+		0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeVC.swift; sourceTree = "<group>"; };
+		0F177CBF20583FAC006FA4AF /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		189D6DF620579BD000AA7ECA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		189D6DF820579BEA00AA7ECA /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		189D6DFA20579C3100AA7ECA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -139,6 +153,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F177CAF20583848006FA4AF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		0F177CB02058398E006FA4AF /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				0F177CB1205839A8006FA4AF /* CheckOutVC.swift */,
+				0F177CB8205839FD006FA4AF /* CheckOut.storyboard */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
+		0F177CB3205839AE006FA4AF /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				0F177CB4205839DA006FA4AF /* PaymentVC.swift */,
+				0F177CB6205839EA006FA4AF /* Payment.storyboard */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		0F177CBA20583A4A006FA4AF /* PaymentMethod */ = {
+			isa = PBXGroup;
+			children = (
+				0F177CBB20583A5F006FA4AF /* PaymentType.storyboard */,
+				0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */,
+			);
+			path = PaymentMethod;
+			sourceTree = "<group>";
+		};
 		189D6DF420579B7000AA7ECA /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +223,9 @@
 		189D6E012057B88200AA7ECA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				189D6E262057D9A600AA7ECA /* CheckOut */,
-				189D6E252057D8ED00AA7ECA /* Payment */,
+				0F177CBA20583A4A006FA4AF /* PaymentMethod */,
+				0F177CB3205839AE006FA4AF /* Payment */,
+				0F177CB02058398E006FA4AF /* CheckOut */,
 				189D6E202057D80E00AA7ECA /* Cart */,
 				189D6E1B2057D6E800AA7ECA /* Filters */,
 				189D6E022057B9D000AA7ECA /* HomeVC.swift */,
@@ -239,20 +288,6 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
-		189D6E252057D8ED00AA7ECA /* Payment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Payment;
-			sourceTree = "<group>";
-		};
-		189D6E262057D9A600AA7ECA /* CheckOut */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CheckOut;
-			sourceTree = "<group>";
-		};
 		189D6E272057DA1600AA7ECA /* ResturentMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +302,7 @@
 			children = (
 				189D6E2D2057E84400AA7ECA /* ResturentCell.swift */,
 				189D6E2F2057E89800AA7ECA /* ResturentCollCell.swift */,
+				0F177CBF20583FAC006FA4AF /* CartCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -305,6 +341,7 @@
 		18B9C4BA20579555004CEDA5 /* GRABULL */ = {
 			isa = PBXGroup;
 			children = (
+				0F177CAF20583848006FA4AF /* Location */,
 				189D6E002057B86200AA7ECA /* TabbarController */,
 				189D6DF520579BA800AA7ECA /* SignUp */,
 				189D6DF420579B7000AA7ECA /* Login */,
@@ -476,12 +513,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F177CB9205839FD006FA4AF /* CheckOut.storyboard in Resources */,
 				189D6E1A2057BD1200AA7ECA /* TabBar.storyboard in Resources */,
 				189D6DF920579BEA00AA7ECA /* Registration.storyboard in Resources */,
+				0F177CBC20583A5F006FA4AF /* PaymentType.storyboard in Resources */,
 				189D6DF720579BD000AA7ECA /* Login.storyboard in Resources */,
 				189D6E362057FC9200AA7ECA /* AddItem.storyboard in Resources */,
 				18B9C4C920579555004CEDA5 /* LaunchScreen.storyboard in Resources */,
 				189D6E242057D84700AA7ECA /* Cart.storyboard in Resources */,
+				0F177CB7205839EA006FA4AF /* Payment.storyboard in Resources */,
 				189D6E0F2057BB7200AA7ECA /* History.storyboard in Resources */,
 				189D6E152057BBC000AA7ECA /* Search.storyboard in Resources */,
 				189D6E292057DA5B00AA7ECA /* MenuItems.storyboard in Resources */,
@@ -666,16 +706,20 @@
 			files = (
 				189D6E1F2057D73500AA7ECA /* FiltersVC.swift in Sources */,
 				189D6E2B2057DA9000AA7ECA /* MenuItemsVC.swift in Sources */,
+				0F177CB2205839A8006FA4AF /* CheckOutVC.swift in Sources */,
 				18B9C4BE20579555004CEDA5 /* ViewController.swift in Sources */,
 				189D6E222057D82300AA7ECA /* CartVC.swift in Sources */,
 				189D6E302057E89800AA7ECA /* ResturentCollCell.swift in Sources */,
 				18B9C4BC20579555004CEDA5 /* AppDelegate.swift in Sources */,
+				0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */,
 				189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */,
 				189D6E182057BCB600AA7ECA /* TabBarControl.swift in Sources */,
 				189D6E132057BBAD00AA7ECA /* SearchVC.swift in Sources */,
+				0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */,
 				189D6E0A2057BB2A00AA7ECA /* MyProfileVC.swift in Sources */,
 				189D6E032057B9D000AA7ECA /* HomeVC.swift in Sources */,
 				189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */,
+				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
 				189D6E2E2057E84400AA7ECA /* ResturentCell.swift in Sources */,

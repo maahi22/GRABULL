@@ -17,13 +17,24 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-     @IBOutlet weak var gotoCart: UIBarButtonItem!
+    
+    @IBOutlet weak var gotoCart: UIBarButtonItem!
+    @IBOutlet weak var segmentController: UISegmentedControl!
+    @IBOutlet weak var topCollectionView: UICollectionView!
+    @IBOutlet weak var listTblView: UITableView!
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+        segmentController.tintColor = .white
+    
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,9 +72,8 @@ class HomeVC: UIViewController {
     @IBAction func filterBy(_ sender: Any) {
    
         let mainStoryBoard = UIStoryboard(name: "Filters", bundle: nil)
-        let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "FiltersVC") as! FiltersVC
-        ViewController.modalPresentationStyle = .OverCurrentContext
-        let navController = UINavigationController(rootViewController: ViewController)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "FiltersVC") as! FiltersVC
+        let navController = UINavigationController(rootViewController: viewController)
         self.present(navController, animated: true) {
             
         }
@@ -117,7 +127,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell:ResturentCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ResturentCell
-        cell.backgroundColor = .green
+        
         return cell
     }
     
@@ -153,7 +163,7 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell:ResturentCollCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCollIdentifier, for: indexPath) as! ResturentCollCell
-        cell.backgroundColor = .yellow
+        
          return cell
     }
 
@@ -163,8 +173,8 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
         
             let padding: CGFloat = 5
             let collectionCellSize = collectionView.frame.size.width - padding
-            let height = collectionView.frame.size.height - (padding * 2)
-            return CGSize(width: collectionCellSize/4, height: height)
+            let height = collectionView.frame.size.height - (padding * 4)
+            return CGSize(width: collectionCellSize/5, height: height)
             
         
     }

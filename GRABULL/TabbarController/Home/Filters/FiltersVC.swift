@@ -35,5 +35,18 @@ class FiltersVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+        
+        self.dismiss(animated: true) {
+            
+        }
+        
+    }
+    
+    
+    
 
 }

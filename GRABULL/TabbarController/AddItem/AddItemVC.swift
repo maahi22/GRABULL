@@ -18,6 +18,7 @@ class AddItemVC: UIViewController {
         view.isOpaque = false
         view.backgroundColor = .clear // try other colors, say: .white or black with Alpha etc.
     
+        
     
     }
 

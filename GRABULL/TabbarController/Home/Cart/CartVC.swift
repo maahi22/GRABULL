@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+private let reuseCartCell = "CartCell"
+
 class CartVC: UIViewController {
 
     override func viewDidLoad() {
@@ -31,5 +34,81 @@ class CartVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+    
+        self.dismiss(animated: true) {
+            
+        }
+    
+    }
+    
+    
+    
+    @IBAction func clickCheckOut(_ sender: Any) {
+    
+        let mainStoryBoard = UIStoryboard(name: "CheckOut", bundle: nil)
+        let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CheckOutVC") as! CheckOutVC
+        //let navController = UINavigationController(rootViewController: ViewController)
+        self.navigationController?.pushViewController(ViewController, animated: true)
+        /*self.present(navController, animated: true) {
+            
+        }*/
+    
+    }
+    
+    
 }
+
+
+extension CartVC:UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 2.0
+        
+    }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 100.0
+        
+    }
+    
+    
+    
+    
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+        
+    }
+    
+    
+    
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:CartCell = tableView.dequeueReusableCell(withIdentifier: reuseCartCell, for: indexPath) as! CartCell
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    
+}
+
+

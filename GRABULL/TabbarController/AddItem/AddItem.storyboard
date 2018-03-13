@@ -88,7 +88,7 @@
                                                 <rect key="frame" x="220" y="180" width="135" height="45"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hps-2Z-Q6a">
-                                                        <rect key="frame" x="2" y="2" width="42.5" height="41"/>
+                                                        <rect key="frame" x="3" y="3" width="41.5" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <state key="normal" title="-">
@@ -96,7 +96,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfu-yk-NcK">
-                                                        <rect key="frame" x="90.5" y="2" width="42.5" height="41"/>
+                                                        <rect key="frame" x="90.5" y="3" width="41.5" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <state key="normal" title="+">
@@ -104,7 +104,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c5-9u-41v">
-                                                        <rect key="frame" x="46.5" y="2" width="42" height="41"/>
+                                                        <rect key="frame" x="46.5" y="3" width="42" height="39"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <state key="normal" title="15">
@@ -115,23 +115,23 @@
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="9c5-9u-41v" firstAttribute="leading" secondItem="Hps-2Z-Q6a" secondAttribute="trailing" constant="2" id="4ie-wP-v1Q"/>
-                                                    <constraint firstItem="vfu-yk-NcK" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="2" id="Cel-sQ-WTM"/>
-                                                    <constraint firstItem="Hps-2Z-Q6a" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="2" id="HNi-Ej-47z"/>
+                                                    <constraint firstItem="vfu-yk-NcK" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="3" id="Cel-sQ-WTM"/>
+                                                    <constraint firstItem="Hps-2Z-Q6a" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="3" id="HNi-Ej-47z"/>
                                                     <constraint firstItem="vfu-yk-NcK" firstAttribute="width" secondItem="Hps-2Z-Q6a" secondAttribute="width" id="PB0-HZ-KTV"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vfu-yk-NcK" secondAttribute="bottom" constant="2" id="Sum-DX-LCv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vfu-yk-NcK" secondAttribute="bottom" constant="3" id="Sum-DX-LCv"/>
                                                     <constraint firstAttribute="width" constant="135" id="Wbu-zf-Moi"/>
                                                     <constraint firstItem="9c5-9u-41v" firstAttribute="width" secondItem="Hps-2Z-Q6a" secondAttribute="width" id="Yxe-ZN-AY2"/>
                                                     <constraint firstItem="vfu-yk-NcK" firstAttribute="leading" secondItem="9c5-9u-41v" secondAttribute="trailing" constant="2" id="cLw-wb-1dK"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9c5-9u-41v" secondAttribute="bottom" constant="2" id="hmY-Wj-SzT"/>
-                                                    <constraint firstAttribute="trailing" secondItem="vfu-yk-NcK" secondAttribute="trailing" constant="2" id="q89-30-0Qd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Hps-2Z-Q6a" secondAttribute="bottom" constant="2" id="rDQ-Gb-fsV"/>
-                                                    <constraint firstItem="9c5-9u-41v" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="2" id="sLR-Wv-TMl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9c5-9u-41v" secondAttribute="bottom" constant="3" id="hmY-Wj-SzT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vfu-yk-NcK" secondAttribute="trailing" constant="3" id="q89-30-0Qd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Hps-2Z-Q6a" secondAttribute="bottom" constant="3" id="rDQ-Gb-fsV"/>
+                                                    <constraint firstItem="9c5-9u-41v" firstAttribute="top" secondItem="WIn-Ef-zjb" secondAttribute="top" constant="3" id="sLR-Wv-TMl"/>
                                                     <constraint firstAttribute="height" constant="45" id="tfE-Du-2Sp"/>
-                                                    <constraint firstItem="Hps-2Z-Q6a" firstAttribute="leading" secondItem="WIn-Ef-zjb" secondAttribute="leading" constant="2" id="zxc-th-JC6"/>
+                                                    <constraint firstItem="Hps-2Z-Q6a" firstAttribute="leading" secondItem="WIn-Ef-zjb" secondAttribute="leading" constant="3" id="zxc-th-JC6"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="4"/>
+                                                        <integer key="value" value="7"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer..borderWidth ">
                                                         <integer key="value" value="1"/>
@@ -202,7 +202,7 @@
                                             <constraint firstAttribute="height" constant="35" id="CpZ-DY-ebB"/>
                                             <constraint firstAttribute="width" constant="60" id="sct-aq-WSX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.60397820719999995" green="0.72239925989999998" blue="0.80792557570000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -212,7 +212,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chilly Potato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-1f-zYF">
                                         <rect key="frame" x="5" y="5" width="285" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" red="0.60397820719999995" green="0.72239925989999998" blue="0.80792557570000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
