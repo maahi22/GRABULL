@@ -14,6 +14,7 @@
 		0F177CBC20583A5F006FA4AF /* PaymentType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F177CBB20583A5F006FA4AF /* PaymentType.storyboard */; };
 		0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */; };
 		0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBF20583FAC006FA4AF /* CartCell.swift */; };
+		0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CC120584E29006FA4AF /* LocationManager.swift */; };
 		189D6DF720579BD000AA7ECA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF620579BD000AA7ECA /* Login.storyboard */; };
 		189D6DF920579BEA00AA7ECA /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF820579BEA00AA7ECA /* Registration.storyboard */; };
 		189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D6DFA20579C3100AA7ECA /* LoginVC.swift */; };
@@ -77,6 +78,7 @@
 		0F177CBB20583A5F006FA4AF /* PaymentType.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentType.storyboard; sourceTree = "<group>"; };
 		0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeVC.swift; sourceTree = "<group>"; };
 		0F177CBF20583FAC006FA4AF /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		0F177CC120584E29006FA4AF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		189D6DF620579BD000AA7ECA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		189D6DF820579BEA00AA7ECA /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		189D6DFA20579C3100AA7ECA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		0F177CAF20583848006FA4AF /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				0F177CC120584E29006FA4AF /* LocationManager.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 				189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */,
 				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
+				0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
 				189D6E2E2057E84400AA7ECA /* ResturentCell.swift in Sources */,
 				18B9C4C420579555004CEDA5 /* GRABULL.xcdatamodeld in Sources */,
