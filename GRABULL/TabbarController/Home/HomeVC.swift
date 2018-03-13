@@ -23,7 +23,9 @@ class HomeVC: UIViewController {
     @IBOutlet weak var topCollectionView: UICollectionView!
     @IBOutlet weak var listTblView: UITableView!
     
-    
+    var locationManager = LocationManager.sharedInstance
+    var latitude :Double = 0.0
+    var longitude :Double = 0.0
     
     
     
@@ -34,6 +36,24 @@ class HomeVC: UIViewController {
         segmentController.tintColor = .white
     
     
+        //get GPS location
+        locationManager.autoUpdate = true
+        locationManager.startUpdatingLocationWithCompletionHandler { (lat, lang, Status, verboseMsg, error)  in
+            
+            DispatchQueue.main.async(execute: { [weak self] () -> Void  in
+                guard let strongSelf = self else { return }
+                
+                strongSelf.latitude = lat
+                strongSelf.longitude = lang
+                
+            })
+            
+            
+        }
+        
+        //ENDED
+        
+        
     
     }
 

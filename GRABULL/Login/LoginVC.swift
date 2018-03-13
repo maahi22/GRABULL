@@ -64,8 +64,14 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClick(_ sender: Any) {
         
-        
-        
+        let mainStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControl") as! TabBarControl
+        tabController.navigationController?.navigationBar.barTintColor = .red
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //appDelegate.window?.rootViewController = tabController
+        self.present(tabController, animated: true) {
+            
+        }
         
     }
     
