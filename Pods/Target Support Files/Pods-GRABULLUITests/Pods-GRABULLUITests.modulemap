@@ -1,0 +1,6 @@
+framework module Pods_GRABULLUITests {
+  umbrella header "Pods-GRABULLUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
