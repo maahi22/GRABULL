@@ -105,8 +105,22 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
        /* self.present(viewController, animated: true) {
             
         }*/
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController?.present(viewController, animated: true, completion: nil)
+        
+        DispatchQueue.main.async(execute: {  () -> Void  in
+            guard !Bundle.main.bundlePath.hasSuffix(".appex") else {
+                return; // skip operation when embedded to App Extension
+            }
+            
+            if let delegate = UIApplication.shared.delegate {
+                delegate.window!!.rootViewController?.present(viewController, animated: true, completion: { () -> Void in
+                    // optional completion code
+                })
+            }
+         })
+        
+        
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController?.present(viewController, animated: true, completion: nil)*/
     }
     
     

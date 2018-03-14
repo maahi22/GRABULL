@@ -39,7 +39,7 @@ class MyProfileVC: UIViewController {
         let alertController = UIAlertController(title: "Logout!", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
         self.present(alertController, animated: true, completion: nil)//Are you sure you want to logout?
         
-        let yesAction:UIAlertAction  = (UIAlertAction(title: "Ok", style: .destructive, handler: { action in
+        let yesAction:UIAlertAction  = (UIAlertAction(title: "Yes", style: .destructive, handler: { action in
             
             
             DefaultDataManager.deleteUserId()
@@ -53,7 +53,7 @@ class MyProfileVC: UIViewController {
         }))
         alertController.addAction(yesAction)
         
-        alertController.addAction(UIAlertAction(title: "cancel", style: .default, handler: { action in
+        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
             alertController .dismiss(animated: true, completion: nil)
         }))
         
