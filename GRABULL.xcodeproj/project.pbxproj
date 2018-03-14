@@ -47,6 +47,12 @@
 		18B9C4C920579555004CEDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B9C4C720579555004CEDA5 /* LaunchScreen.storyboard */; };
 		18B9C4D420579556004CEDA5 /* GRABULLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4D320579556004CEDA5 /* GRABULLTests.swift */; };
 		18B9C4DF20579556004CEDA5 /* GRABULLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4DE20579556004CEDA5 /* GRABULLUITests.swift */; };
+		18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38CC20590DA70026A3B2 /* Constant.swift */; };
+		18CC38CF2059363F0026A3B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38CE2059363F0026A3B2 /* View.swift */; };
+		18CC38D1205940E60026A3B2 /* DefaultDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */; };
+		18CC38D6205947A70026A3B2 /* UIColor+KCSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38D3205947A60026A3B2 /* UIColor+KCSColor.swift */; };
+		18CC38D7205947A80026A3B2 /* UIView+CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38D4205947A70026A3B2 /* UIView+CardView.swift */; };
+		18CC38D8205947A80026A3B2 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38D5205947A70026A3B2 /* TextField.swift */; };
 		19F95BBF439CB0A44DF7B47F /* Pods_GRABULL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375652D5E69C371FF7CD2A9D /* Pods_GRABULL.framework */; };
 		6400FD07BB0C55EFA6427344 /* Pods_GRABULLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAF62CA7B92BE08DD20FC40 /* Pods_GRABULLTests.framework */; };
 		8AB7CA16B010A5CA57AD3C77 /* Pods_GRABULLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE65A010B8CDE359E709405 /* Pods_GRABULLUITests.framework */; };
@@ -117,6 +123,12 @@
 		18B9C4DA20579556004CEDA5 /* GRABULLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRABULLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B9C4DE20579556004CEDA5 /* GRABULLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRABULLUITests.swift; sourceTree = "<group>"; };
 		18B9C4E020579556004CEDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CC38CC20590DA70026A3B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		18CC38CE2059363F0026A3B2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataManager.swift; sourceTree = "<group>"; };
+		18CC38D3205947A60026A3B2 /* UIColor+KCSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+KCSColor.swift"; sourceTree = "<group>"; };
+		18CC38D4205947A70026A3B2 /* UIView+CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CardView.swift"; sourceTree = "<group>"; };
+		18CC38D5205947A70026A3B2 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		375652D5E69C371FF7CD2A9D /* Pods_GRABULL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRABULL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FB9EF6B735D148A0C12DA6 /* Pods-GRABULLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRABULLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GRABULLUITests/Pods-GRABULLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CD485C775549B4287A92D29 /* Pods-GRABULL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRABULL.release.xcconfig"; path = "Pods/Target Support Files/Pods-GRABULL/Pods-GRABULL.release.xcconfig"; sourceTree = "<group>"; };
@@ -344,6 +356,10 @@
 		18B9C4BA20579555004CEDA5 /* GRABULL */ = {
 			isa = PBXGroup;
 			children = (
+				18CC38CB20590D280026A3B2 /* FileManger */,
+				18CC38CA20590D070026A3B2 /* Extra */,
+				18CC38C920590CF00026A3B2 /* Extensions */,
+				18CC38C820590CCE0026A3B2 /* Helper */,
 				0F177CAF20583848006FA4AF /* Location */,
 				189D6E002057B86200AA7ECA /* TabbarController */,
 				189D6DF520579BA800AA7ECA /* SignUp */,
@@ -375,6 +391,40 @@
 				18B9C4E020579556004CEDA5 /* Info.plist */,
 			);
 			path = GRABULLUITests;
+			sourceTree = "<group>";
+		};
+		18CC38C820590CCE0026A3B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		18CC38C920590CF00026A3B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18CC38D5205947A70026A3B2 /* TextField.swift */,
+				18CC38D3205947A60026A3B2 /* UIColor+KCSColor.swift */,
+				18CC38D4205947A70026A3B2 /* UIView+CardView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18CC38CA20590D070026A3B2 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				18CC38CC20590DA70026A3B2 /* Constant.swift */,
+				18CC38CE2059363F0026A3B2 /* View.swift */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		18CC38CB20590D280026A3B2 /* FileManger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileManger;
 			sourceTree = "<group>";
 		};
 		198151E208B3222F20A113AA /* Frameworks */ = {
@@ -714,20 +764,26 @@
 				189D6E222057D82300AA7ECA /* CartVC.swift in Sources */,
 				189D6E302057E89800AA7ECA /* ResturentCollCell.swift in Sources */,
 				18B9C4BC20579555004CEDA5 /* AppDelegate.swift in Sources */,
+				18CC38D6205947A70026A3B2 /* UIColor+KCSColor.swift in Sources */,
 				0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */,
 				189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */,
+				18CC38CF2059363F0026A3B2 /* View.swift in Sources */,
 				189D6E182057BCB600AA7ECA /* TabBarControl.swift in Sources */,
 				189D6E132057BBAD00AA7ECA /* SearchVC.swift in Sources */,
 				0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */,
 				189D6E0A2057BB2A00AA7ECA /* MyProfileVC.swift in Sources */,
+				18CC38D8205947A80026A3B2 /* TextField.swift in Sources */,
 				189D6E032057B9D000AA7ECA /* HomeVC.swift in Sources */,
 				189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */,
 				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
 				0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
+				18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */,
+				18CC38D1205940E60026A3B2 /* DefaultDataManager.swift in Sources */,
 				189D6E2E2057E84400AA7ECA /* ResturentCell.swift in Sources */,
 				18B9C4C420579555004CEDA5 /* GRABULL.xcdatamodeld in Sources */,
+				18CC38D7205947A80026A3B2 /* UIView+CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,7 +955,7 @@
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KTeck.GRABULL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grabull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -916,7 +972,7 @@
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = KTeck.GRABULL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grabull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

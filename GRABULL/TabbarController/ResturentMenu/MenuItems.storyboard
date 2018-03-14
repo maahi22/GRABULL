@@ -28,33 +28,36 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGe-aC-4rb">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder1" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-Ql-1Us">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder1" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-Ql-1Us">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
                                                         <color key="backgroundColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-Nj-z9n">
-                                                        <rect key="frame" x="29" y="149" width="325" height="63.5"/>
+                                                        <rect key="frame" x="25" y="163.5" width="325" height="65"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder2" translatesAutoresizingMaskIntoConstraints="NO" id="JA0-ZC-QM3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="63.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="65"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="JA0-ZC-QM3" firstAttribute="leading" secondItem="XKx-Nj-z9n" secondAttribute="leading" id="6sY-88-TBm"/>
-                                                            <constraint firstAttribute="trailing" secondItem="JA0-ZC-QM3" secondAttribute="trailing" id="J5m-wl-DlH"/>
-                                                            <constraint firstItem="JA0-ZC-QM3" firstAttribute="top" secondItem="XKx-Nj-z9n" secondAttribute="top" id="c7g-Ys-mKa"/>
-                                                            <constraint firstAttribute="bottom" secondItem="JA0-ZC-QM3" secondAttribute="bottom" id="xnn-VI-NjH"/>
+                                                            <constraint firstItem="JA0-ZC-QM3" firstAttribute="leading" secondItem="XKx-Nj-z9n" secondAttribute="leading" id="Gcs-R1-ypf"/>
+                                                            <constraint firstItem="JA0-ZC-QM3" firstAttribute="top" secondItem="XKx-Nj-z9n" secondAttribute="top" id="OYD-8U-SUz"/>
+                                                            <constraint firstAttribute="height" constant="65" id="V6m-lF-r65"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JA0-ZC-QM3" secondAttribute="bottom" id="aJ5-WM-1Se"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JA0-ZC-QM3" secondAttribute="trailing" id="dqX-YB-vgY"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="XKx-Nj-z9n" firstAttribute="top" secondItem="iGe-aC-4rb" secondAttribute="top" constant="149" id="0KU-UA-ewm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="XKx-Nj-z9n" secondAttribute="trailing" constant="21" id="3rV-ix-3lz"/>
-                                                    <constraint firstItem="XKx-Nj-z9n" firstAttribute="leading" secondItem="iGe-aC-4rb" secondAttribute="leading" constant="29" id="5kY-am-F8V"/>
-                                                    <constraint firstAttribute="bottom" secondItem="XKx-Nj-z9n" secondAttribute="bottom" constant="21" id="Kla-HL-wd0"/>
+                                                    <constraint firstItem="dyI-Ql-1Us" firstAttribute="top" secondItem="iGe-aC-4rb" secondAttribute="top" id="1YB-wk-jTT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dyI-Ql-1Us" secondAttribute="bottom" constant="39" id="723-S6-zAX"/>
+                                                    <constraint firstItem="XKx-Nj-z9n" firstAttribute="leading" secondItem="iGe-aC-4rb" secondAttribute="leading" constant="25" id="BoM-VT-Z1U"/>
+                                                    <constraint firstItem="dyI-Ql-1Us" firstAttribute="leading" secondItem="iGe-aC-4rb" secondAttribute="leading" id="Es7-MQ-XKJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XKx-Nj-z9n" secondAttribute="bottom" constant="5" id="eKj-tw-gJW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XKx-Nj-z9n" secondAttribute="trailing" constant="25" id="jc9-on-LPK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dyI-Ql-1Us" secondAttribute="trailing" id="kU8-t3-lXA"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-Lb-VAR">

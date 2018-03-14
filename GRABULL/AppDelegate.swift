@@ -50,29 +50,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*if let data = UserDefaults.standard.data(forKey: MyDuniaUserDetails),
             let _ = NSKeyedUnarchiver.unarchiveObject(with: data) as? User {
          */
-         
-         
-         let mainStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
-         let tabController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControl") as! TabBarControl
-         tabController.navigationController?.navigationBar.barTintColor = .red
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = tabController
-         
+        let userId = DefaultDataManager.getUserId()
+        
+        if userId != "" {
+            
+            let mainStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
+            let tabController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControl") as! TabBarControl
+            tabController.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = tabController
+            
             print("Already Loged in")
-       /* } else {
+        } else {
             let mainStoryBoard = UIStoryboard(name: "Login", bundle: nil)
             let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
             let navController = UINavigationController(rootViewController: ViewController)
-            ViewController.navigationController?.navigationBar.barTintColor = .red//UIColor.hexStringToUIColor(hex: MyDunia_colorPrimary)
-            
-            
+            ViewController.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = navController
-       // }
-        */
+        }
+        
         
         //Set navigation color
-        UINavigationBar.appearance().barTintColor = .red//UIColor.hexStringToUIColor(hex: MyDunia_colorPrimary)
+        UINavigationBar.appearance().barTintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)//UIColor.hexStringToUIColor(hex: MyDunia_colorPrimary)
         UIBarButtonItem.appearance().tintColor = .white//UIColor.hexStringToUIColor(hex: MyDunia_navigationTitleColor)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]//UIColor.hexStringToUIColor(hex: MyDunia_navigationTitleColor)]
         

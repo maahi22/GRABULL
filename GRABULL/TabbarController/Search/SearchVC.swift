@@ -10,10 +10,17 @@ import UIKit
 
 class SearchVC: UIViewController {
 
+    lazy var searchBar = UISearchBar(frame: CGRect.zero)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchBar.showsCancelButton = true
+        searchBar.delegate = self
+        searchBar.placeholder = "Enter Zip Code/city.."
+        self.navigationItem.titleView = searchBar
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,3 +40,40 @@ class SearchVC: UIViewController {
     */
 
 }
+
+
+extension SearchVC: UISearchBarDelegate{
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+       // searchBar.resignFirstResponder()
+       
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+       // searchBar.resignFirstResponder()
+       
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        // shouldShowSearchResults = false
+        // tblSearchResults.reloadData()
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        /*if !shouldShowSearchResults {
+         shouldShowSearchResults = true
+         tblSearchResults.reloadData()
+         }*/
+        
+        searchBar.resignFirstResponder()
+        
+        
+        
+    }
+}
+

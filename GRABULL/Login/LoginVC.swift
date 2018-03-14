@@ -64,6 +64,10 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClick(_ sender: Any) {
         
+        
+        
+        DefaultDataManager.saveUserId("userid")
+        
         let mainStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
         let tabController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControl") as! TabBarControl
         tabController.navigationController?.navigationBar.barTintColor = .red

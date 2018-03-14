@@ -29,6 +29,7 @@ class HomeVC: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +46,68 @@ class HomeVC: UIViewController {
                 
                 strongSelf.latitude = lat
                 strongSelf.longitude = lang
+                
+                
+                self?.locationManager.reverseGeocodeLocationWithLatLon(latitude: lat, longitude: lang, onReverseGeocodingCompletionHandler: { (placeresponceDict, placemark, Add) in
+                    
+                    
+                    guard  let address:String = placeresponceDict?.value(forKey: "formattedAddress") as! String else{
+                        return
+                    }
+                    
+                    if address != "" {
+                        
+                        
+                        
+                        
+                        strongSelf.title = "\(address)"
+                      /*  if #available(iOS 11.0, *) {
+                            
+                            strongSelf.navigationController?.navigationBar.prefersLargeTitles = true
+                            strongSelf.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+                            
+                            strongSelf.navigationController?.navigationBar.largeTitleTextAttributes = [
+                                NSAttributedStringKey.foregroundColor: UIColor.black,
+                                NSAttributedStringKey.font : UIFont.preferredFont(forTextStyle: .largeTitle)
+                            ]
+                        
+                        
+                            for navItem in(strongSelf.navigationController?.navigationBar.subviews)! {
+                                for itemSubView in navItem.subviews {
+                                    if let largeLabel = itemSubView as? UILabel {
+                                        largeLabel.text = strongSelf.title
+                                        largeLabel.numberOfLines = 2
+                                        largeLabel.lineBreakMode = .byWordWrapping
+                                    }
+                                }
+                            }
+                            
+                            
+                            
+                        } else {
+                            // Fallback on earlier versions
+                        }
+                        
+                        
+                        */
+                        
+                        
+                        
+                        
+                      //  let attributes = [NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Light", size: 15)!]
+                      //  UINavigationBar.appearance().titleTextAttributes = attributes
+                        
+                        for tabBarItem in (strongSelf.tabBarController?.tabBar.items)!
+                        {
+                            tabBarItem.title = ""
+                            tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+                        }
+                        
+                    }
+                    
+                    
+                    //print("Address... \(placeresponceDict)")
+                })
                 
             })
             

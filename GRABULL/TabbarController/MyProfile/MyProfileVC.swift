@@ -32,4 +32,34 @@ class MyProfileVC: UIViewController {
     }
     */
 
+    
+    
+    @IBAction func logoutApp(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Logout!", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        self.present(alertController, animated: true, completion: nil)//Are you sure you want to logout?
+        
+        let yesAction:UIAlertAction  = (UIAlertAction(title: "Ok", style: .destructive, handler: { action in
+            
+            
+            DefaultDataManager.deleteUserId()
+            
+            let mainStoryBoard = UIStoryboard(name: "Login", bundle: nil)
+            let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            let navController = UINavigationController(rootViewController: ViewController)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = navController
+            
+        }))
+        alertController.addAction(yesAction)
+        
+        alertController.addAction(UIAlertAction(title: "cancel", style: .default, handler: { action in
+            alertController .dismiss(animated: true, completion: nil)
+        }))
+        
+    }
+    
+    
+    
+    
 }

@@ -10,6 +10,18 @@ import UIKit
 
 class AddItemVC: UIViewController {
 
+    
+    
+    @IBOutlet weak var btnHalfRadio: UIButton!
+    @IBOutlet weak var btnFullRadio: UIButton!
+    
+    
+    @IBOutlet weak var btnNegative: UIButton!
+    @IBOutlet weak var btnPositive: UIButton!
+    @IBOutlet weak var btnCount: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +30,14 @@ class AddItemVC: UIViewController {
         view.isOpaque = false
         view.backgroundColor = .clear // try other colors, say: .white or black with Alpha etc.
     
+        btnHalfRadio.tintColor = .red
+        btnFullRadio.tintColor = .red
         
     
+        btnNegative.roundCorners([.topLeft, .bottomLeft], radius: 4)
+
+        btnPositive.roundCorners([.topRight, .bottomRight], radius: 4)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +62,63 @@ class AddItemVC: UIViewController {
         self.dismiss(animated: true) {
             
         }
+    }
+    
+    
+    @IBAction func radioClick(_ sender: UIButton) {
+    
+        let tag = sender.tag
+        let btn:UIButton = sender
+        let img = UIImage.init(named: "radioOn")
+        let imgOff = UIImage.init(named: "radioOff")
+        btn.setImage(img, for: .normal)
+        
+        if tag == 2{
+            btnHalfRadio.setImage(imgOff, for: .normal)
+        }
+        
+       if tag == 1 {
+            btnFullRadio.setImage(imgOff, for: .normal)
+        }
+    
+    
+    }
+    
+    
+    @IBAction func clickpositive(_ sender: Any) {
+    
+    
+        guard let countValue = btnCount.titleLabel?.text else { return }
+        if Int(countValue)! < 1 {
+            return
+        }else{
+            
+            let  val:Int = Int(countValue)!
+            btnCount.setTitle("\(val + 1)", for: .normal)
+            
+        }
+        
+    }
+    
+    
+    
+    @IBAction func clickNegative(_ sender: Any) {
+    
+        guard let countValue = btnCount.titleLabel?.text else { return }
+        
+        
+        if Int(countValue) == 1 {
+            return
+        }else{
+            
+            let  val:Int = Int(countValue)!
+            btnCount.setTitle("\(val - 1)", for: .normal)
+            
+        }
+    
+        
+        
+        
     }
     
     

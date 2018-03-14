@@ -102,9 +102,11 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
         let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "AddItemVC") as! AddItemVC
         
         viewController.modalPresentationStyle = .overCurrentContext
-        self.present(viewController, animated: true) {
+       /* self.present(viewController, animated: true) {
             
-        }
+        }*/
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController?.present(viewController, animated: true, completion: nil)
     }
     
     
