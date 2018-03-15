@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About UsVC-->
+        <scene sceneID="8jv-4x-tbs">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsVC" id="W8G-rE-iUy" customClass="AboutUsVC" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75M-rp-gqv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wd-wQ-65B">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-bm-tHZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="658"/>
+                                        <subviews>
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-xq-ELV">
+                                                <rect key="frame" x="30" y="30" width="315" height="598"/>
+                                                <color key="backgroundColor" red="0.6588235294" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r6A-0R-JmN">
+                                                <rect key="frame" x="30" y="30" width="315" height="598"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Why Grabull
+Finding the top rated restaurants is easy with Grabull The Restaurant Directory and Restaurant Guide                                                                                 Rewards for Users
+Search our network to be instantly connected with any Restaurant in your area</string>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uw7-xq-ELV" secondAttribute="trailing" constant="30" id="8nb-FV-C2V"/>
+                                            <constraint firstItem="uw7-xq-ELV" firstAttribute="top" secondItem="1nQ-bm-tHZ" secondAttribute="top" constant="30" id="9iu-pu-kA6"/>
+                                            <constraint firstAttribute="bottom" secondItem="uw7-xq-ELV" secondAttribute="bottom" constant="30" id="IPK-no-DNq"/>
+                                            <constraint firstAttribute="height" constant="658" id="pha-YS-0jZ"/>
+                                            <constraint firstItem="uw7-xq-ELV" firstAttribute="leading" secondItem="1nQ-bm-tHZ" secondAttribute="leading" constant="30" id="xRk-cO-y2H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1nQ-bm-tHZ" secondAttribute="bottom" id="Am8-sE-Cpu"/>
+                                    <constraint firstItem="1nQ-bm-tHZ" firstAttribute="leading" secondItem="5Wd-wQ-65B" secondAttribute="leading" id="jS3-3v-qoe"/>
+                                    <constraint firstAttribute="trailing" secondItem="1nQ-bm-tHZ" secondAttribute="trailing" id="qxn-9H-HHZ"/>
+                                    <constraint firstItem="1nQ-bm-tHZ" firstAttribute="top" secondItem="5Wd-wQ-65B" secondAttribute="top" id="xcC-10-0Lr"/>
+                                    <constraint firstItem="1nQ-bm-tHZ" firstAttribute="centerX" secondItem="5Wd-wQ-65B" secondAttribute="centerX" id="zd4-uy-jtr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Yp-5g-l2p" firstAttribute="bottom" secondItem="5Wd-wQ-65B" secondAttribute="bottom" id="0Oe-Ds-3db"/>
+                            <constraint firstItem="3Yp-5g-l2p" firstAttribute="trailing" secondItem="5Wd-wQ-65B" secondAttribute="trailing" id="Jet-kK-hCq"/>
+                            <constraint firstItem="5Wd-wQ-65B" firstAttribute="leading" secondItem="3Yp-5g-l2p" secondAttribute="leading" id="bpY-nb-Esy"/>
+                            <constraint firstItem="5Wd-wQ-65B" firstAttribute="top" secondItem="3Yp-5g-l2p" secondAttribute="top" id="tKR-1i-r76"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Yp-5g-l2p"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PK5-Qt-dN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-139"/>
+        </scene>
+    </scenes>
+</document>

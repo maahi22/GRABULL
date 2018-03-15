@@ -10,23 +10,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Settings-->
         <scene sceneID="OM5-ce-PNc">
             <objects>
                 <viewController storyboardIdentifier="MyProfileVC" id="Bta-Wb-1t7" customClass="MyProfileVC" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kyh-cx-Wwx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-YN-ZeC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ntB-B4-ioz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ntB-B4-ioz" id="xgX-XA-4MJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bta-Wb-1t7" id="4m0-JQ-JG9"/>
+                                    <outlet property="delegate" destination="Bta-Wb-1t7" id="bGl-fn-0jK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aRd-Rl-wdA" firstAttribute="trailing" secondItem="fr0-YN-ZeC" secondAttribute="trailing" id="6zP-uF-9HK"/>
+                            <constraint firstItem="fr0-YN-ZeC" firstAttribute="top" secondItem="aRd-Rl-wdA" secondAttribute="top" id="ekd-Un-vmi"/>
+                            <constraint firstItem="fr0-YN-ZeC" firstAttribute="leading" secondItem="aRd-Rl-wdA" secondAttribute="leading" id="xZV-ux-WQC"/>
+                            <constraint firstItem="aRd-Rl-wdA" firstAttribute="bottom" secondItem="fr0-YN-ZeC" secondAttribute="bottom" id="zfQ-TY-YDn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aRd-Rl-wdA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="VED-7d-W6f" customClass="Profile">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="AaW-1x-ZSj">
-                            <connections>
-                                <action selector="logoutApp:" destination="Bta-Wb-1t7" id="4pp-Wa-XLC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="VED-7d-W6f" customClass="Profile"/>
+                    <connections>
+                        <outlet property="settingTableView" destination="fr0-YN-ZeC" id="276-4R-At2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeb-QR-uOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

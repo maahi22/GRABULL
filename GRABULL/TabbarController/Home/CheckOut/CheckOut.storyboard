@@ -18,8 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS0-Ye-fJI">
+                                <rect key="frame" x="20" y="617" width="335" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="y1A-S4-6ec"/>
+                                </constraints>
+                                <state key="normal" title="Pay $ 30">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="payAmount:" destination="3Ke-e2-D2j" eventType="touchUpInside" id="Cup-b2-GoZ"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5G-UI-UOc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31h-iN-Y3v">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -30,7 +43,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="31h-iN-Y3v" secondAttribute="bottom" constant="-397" id="X77-oK-g5c"/>
+                                    <constraint firstAttribute="bottom" secondItem="31h-iN-Y3v" secondAttribute="bottom" constant="-455" id="X77-oK-g5c"/>
                                     <constraint firstAttribute="trailing" secondItem="31h-iN-Y3v" secondAttribute="trailing" id="aRw-DN-84s"/>
                                     <constraint firstItem="31h-iN-Y3v" firstAttribute="leading" secondItem="h5G-UI-UOc" secondAttribute="leading" id="cJO-Y3-juF"/>
                                     <constraint firstItem="31h-iN-Y3v" firstAttribute="top" secondItem="h5G-UI-UOc" secondAttribute="top" id="jBw-Md-TNe"/>
@@ -40,9 +53,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Y9f-iQ-rbC" firstAttribute="trailing" secondItem="CS0-Ye-fJI" secondAttribute="trailing" constant="20" id="EJS-iI-q3o"/>
                             <constraint firstItem="Y9f-iQ-rbC" firstAttribute="trailing" secondItem="h5G-UI-UOc" secondAttribute="trailing" id="GRZ-Eb-crI"/>
                             <constraint firstItem="h5G-UI-UOc" firstAttribute="top" secondItem="Y9f-iQ-rbC" secondAttribute="top" id="Me8-a3-BTJ"/>
-                            <constraint firstItem="Y9f-iQ-rbC" firstAttribute="bottom" secondItem="h5G-UI-UOc" secondAttribute="bottom" id="YX9-9L-tWd"/>
+                            <constraint firstItem="Y9f-iQ-rbC" firstAttribute="bottom" secondItem="h5G-UI-UOc" secondAttribute="bottom" constant="58" id="YX9-9L-tWd"/>
+                            <constraint firstItem="CS0-Ye-fJI" firstAttribute="leading" secondItem="Y9f-iQ-rbC" secondAttribute="leading" constant="20" id="bVh-ch-Wxh"/>
+                            <constraint firstItem="Y9f-iQ-rbC" firstAttribute="bottom" secondItem="CS0-Ye-fJI" secondAttribute="bottom" constant="5" id="epM-LU-vwt"/>
                             <constraint firstItem="h5G-UI-UOc" firstAttribute="leading" secondItem="Y9f-iQ-rbC" secondAttribute="leading" id="hHh-b5-M7f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y9f-iQ-rbC"/>
@@ -51,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I51-T0-NZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="148"/>
+            <point key="canvasLocation" x="172" y="147.97601199400302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1O1-IZ-96O">

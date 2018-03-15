@@ -1,19 +1,19 @@
 //
-//  CheckOutVC.swift
+//  AboutUsVC.swift
 //  GRABULL
 //
-//  Created by Maahi on 13/03/18.
+//  Created by Apple on 15/03/18.
 //  Copyright © 2018 m&PTeck. All rights reserved.
 //
 
 import UIKit
 
-class CheckOutVC: UIViewController {
+class AboutUsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Checkout"
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,17 +32,4 @@ class CheckOutVC: UIViewController {
     }
     */
 
-    
-    
-    
-    @IBAction func payAmount(_ sender: Any) {
-    
-        let mainStoryBoard = UIStoryboard(name: "PaymentType", bundle: nil)
-        let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "PaymentTypeVC") as! PaymentTypeVC
-        self.navigationController?.pushViewController(ViewController, animated: true)
-    
-    }
-    
-  
-    
 }

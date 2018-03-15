@@ -10,6 +10,9 @@ import UIKit
 
 class PaymentVC: UIViewController {
 
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,3 +36,10 @@ class PaymentVC: UIViewController {
     */
 
 }
+
+
+
+
+
+
+

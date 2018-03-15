@@ -160,12 +160,6 @@ class HomeVC: UIViewController {
         self.present(navController, animated: true) {
             
         }
-        
-       
-       
-        
-        
-        
     
     }
     

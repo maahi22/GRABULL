@@ -50,9 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /*if let data = UserDefaults.standard.data(forKey: MyDuniaUserDetails),
             let _ = NSKeyedUnarchiver.unarchiveObject(with: data) as? User {
          */
-        let userId = DefaultDataManager.getUserId()
+       // let userId = DefaultDataManager.getUserId()
         
-        if userId != "" {
+      //  if userId != "" {
             
             let mainStoryBoard = UIStoryboard(name: "TabBar", bundle: nil)
             let tabController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarControl") as! TabBarControl
@@ -61,14 +61,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appDelegate.window?.rootViewController = tabController
             
             print("Already Loged in")
-        } else {
+        /*} else {
             let mainStoryBoard = UIStoryboard(name: "Login", bundle: nil)
             let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
             let navController = UINavigationController(rootViewController: ViewController)
             ViewController.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = navController
-        }
+        }*/
         
         
         //Set navigation color

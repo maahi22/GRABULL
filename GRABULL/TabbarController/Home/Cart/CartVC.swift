@@ -48,14 +48,44 @@ class CartVC: UIViewController {
     
     @IBAction func clickCheckOut(_ sender: Any) {
     
-        let mainStoryBoard = UIStoryboard(name: "CheckOut", bundle: nil)
-        let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CheckOutVC") as! CheckOutVC
-        //let navController = UINavigationController(rootViewController: ViewController)
-        self.navigationController?.pushViewController(ViewController, animated: true)
-        /*self.present(navController, animated: true) {
+        
+        let userId = DefaultDataManager.getUserId()
+        if userId == "" {
+            let mainStoryBoard = UIStoryboard(name: "Login", bundle: nil)
+            let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+           // let navController = UINavigationController(rootViewController: viewController)
+           // viewController.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
+            viewController.modalPresentationStyle = .overCurrentContext
+            DispatchQueue.main.async(execute: {  () -> Void  in
+                
+                
+                let navController = UINavigationController(rootViewController: viewController)
+                self.present(navController, animated: true) {
+                    
+                }
+                
+               /* guard !Bundle.main.bundlePath.hasSuffix(".appex") else {
+                    return; // skip operation when embedded to App Extension
+                }
+                
+                if let delegate = UIApplication.shared.delegate {
+                    delegate.window!!.rootViewController?.present(viewController, animated: true, completion: { () -> Void in
+                        // optional completion code
+                    })
+                }*/
+            })
             
-        }*/
-    
+            
+        }else{
+            let mainStoryBoard = UIStoryboard(name: "CheckOut", bundle: nil)
+            let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CheckOutVC") as! CheckOutVC
+            //let navController = UINavigationController(rootViewController: ViewController)
+            self.navigationController?.pushViewController(ViewController, animated: true)
+            /*self.present(navController, animated: true) {
+             
+             }*/
+        }
+        
     }
     
     

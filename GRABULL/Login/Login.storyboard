@@ -207,7 +207,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HL1-GT-HmR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="qGR-Sv-zsF"/>
+                    <navigationItem key="navigationItem" title="Login" id="qGR-Sv-zsF">
+                        <barButtonItem key="leftBarButtonItem" title="X" image=" " id="mbq-JA-NQx">
+                            <connections>
+                                <action selector="dismissView:" destination="uqq-ak-poZ" id="UrL-1e-B3q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtonDismiss" destination="mbq-JA-NQx" id="sGn-Cy-uhn"/>
+                        <outlet property="txtEmailMobile" destination="Oge-Cd-6pn" id="uOA-RO-St5"/>
+                        <outlet property="txtPassword" destination="SiZ-5h-LvW" id="R0A-OT-ERD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jY-9z-dda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,4 +243,7 @@
             <point key="canvasLocation" x="-252" y="178"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" " width="16" height="16"/>
+    </resources>
 </document>

@@ -11,7 +11,10 @@ import UIKit
 class SearchVC: UIViewController {
 
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
-
+    var locationManager = LocationManager.sharedInstance
+    var latitude :Double = 0.0
+    var longitude :Double = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,33 @@ class SearchVC: UIViewController {
     }
     */
 
+    
+    
+    
+    
+    func callSearchApi()  {
+        
+        let token = DefaultDataManager.getDeviceToken()
+        let urlString = baseUrl + Api_Login
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        let paramString = ["DeviceId":deviceID,"latitude":self.latitude,"longitude":self.longitude] as [String : Any]
+        
+        /*ConnectionHelper.KSCgetDataFromJson(url: urlString, paramString: paramString) { (responce, status) in
+            
+            
+            
+            
+        }*/
+   
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -63,12 +93,40 @@ extension SearchVC: UISearchBarDelegate{
     }
     
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-    {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        
         /*if !shouldShowSearchResults {
          shouldShowSearchResults = true
          tblSearchResults.reloadData()
          }*/
+        
+        if searchBar.text == "" {
+            searchBar.resignFirstResponder()
+            return
+        }
+        
+        if  let str:String =  searchBar.text {
+            locationManager.geocodeUsingGoogleAddressString(address:str as NSString) { (dict, placemark, add) in
+                
+                
+                //print(dict , placemark)
+                if let locDict = dict {
+                    
+                    guard let lat:String = locDict.value(forKey: "latitude") as? String else {return}
+                    guard let lang:String = locDict.value(forKey: "longitude") as? String else {return}
+                    
+                    
+                    self.latitude =  Double(lat)!
+                    self.longitude = Double(lang)!
+                }
+                
+                self.callSearchApi()
+                print(self.latitude , self.longitude)
+            }
+        }
+        
+        
+        
         
         searchBar.resignFirstResponder()
         
