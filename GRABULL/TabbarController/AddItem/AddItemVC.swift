@@ -69,16 +69,25 @@ class AddItemVC: UIViewController {
     
         let tag = sender.tag
         let btn:UIButton = sender
-        let img = UIImage.init(named: "radioOn")
-        let imgOff = UIImage.init(named: "radioOff")
+        let img = UIImage(named: "radioOn")?.withRenderingMode(.alwaysTemplate)
+        let imgOff = UIImage(named: "radioOff")?.withRenderingMode(.alwaysTemplate)
+        
+        
+        
+       
+        
+        
         btn.setImage(img, for: .normal)
+        btn.tintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
         
         if tag == 2{
             btnHalfRadio.setImage(imgOff, for: .normal)
+            btn.tintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
         }
         
        if tag == 1 {
             btnFullRadio.setImage(imgOff, for: .normal)
+            btn.tintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
         }
     
     

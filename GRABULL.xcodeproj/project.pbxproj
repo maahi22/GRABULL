@@ -368,7 +368,6 @@
 			isa = PBXGroup;
 			children = (
 				18FEF6DA205A70A30026D61E /* Settings */,
-				18CC38CB20590D280026A3B2 /* FileManger */,
 				18CC38CA20590D070026A3B2 /* Extra */,
 				18CC38C920590CF00026A3B2 /* Extensions */,
 				18CC38C820590CCE0026A3B2 /* Helper */,
@@ -432,13 +431,6 @@
 				18CC38CE2059363F0026A3B2 /* View.swift */,
 			);
 			path = Extra;
-			sourceTree = "<group>";
-		};
-		18CC38CB20590D280026A3B2 /* FileManger */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FileManger;
 			sourceTree = "<group>";
 		};
 		18FEF6DA205A70A30026D61E /* Settings */ = {
@@ -979,7 +971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VAWH7R9NX3;
+				DEVELOPMENT_TEAM = 6J7UZY2EAL;
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -996,7 +988,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VAWH7R9NX3;
+				DEVELOPMENT_TEAM = 6J7UZY2EAL;
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

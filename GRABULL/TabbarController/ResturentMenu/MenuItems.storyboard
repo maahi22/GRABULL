@@ -33,17 +33,16 @@
                                                         <color key="backgroundColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-Nj-z9n">
-                                                        <rect key="frame" x="25" y="163.5" width="325" height="65"/>
+                                                        <rect key="frame" x="25" y="155" width="325" height="73.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder2" translatesAutoresizingMaskIntoConstraints="NO" id="JA0-ZC-QM3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="325" height="73.5"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="JA0-ZC-QM3" firstAttribute="leading" secondItem="XKx-Nj-z9n" secondAttribute="leading" id="Gcs-R1-ypf"/>
                                                             <constraint firstItem="JA0-ZC-QM3" firstAttribute="top" secondItem="XKx-Nj-z9n" secondAttribute="top" id="OYD-8U-SUz"/>
-                                                            <constraint firstAttribute="height" constant="65" id="V6m-lF-r65"/>
                                                             <constraint firstAttribute="bottom" secondItem="JA0-ZC-QM3" secondAttribute="bottom" id="aJ5-WM-1Se"/>
                                                             <constraint firstAttribute="trailing" secondItem="JA0-ZC-QM3" secondAttribute="trailing" id="dqX-YB-vgY"/>
                                                         </constraints>
@@ -101,10 +100,15 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
                                                                 </imageView>
                                                             </subviews>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="hDa-BH-boY" firstAttribute="top" secondItem="5LH-UF-N6J" secondAttribute="top" id="0f3-LR-Ybc"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hDa-BH-boY" secondAttribute="trailing" id="6Sz-Ip-NcX"/>
+                                                                <constraint firstItem="hDa-BH-boY" firstAttribute="leading" secondItem="5LH-UF-N6J" secondAttribute="leading" id="BlP-xC-m4Q"/>
                                                                 <constraint firstAttribute="bottom" secondItem="hDa-BH-boY" secondAttribute="bottom" id="IgX-Bm-WyG"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hDa-BH-boY" secondAttribute="bottom" id="aBZ-2h-7XX"/>
                                                                 <constraint firstItem="hDa-BH-boY" firstAttribute="leading" secondItem="5LH-UF-N6J" secondAttribute="leading" id="anm-eT-mM1"/>
+                                                                <constraint firstItem="hDa-BH-boY" firstAttribute="top" secondItem="5LH-UF-N6J" secondAttribute="top" id="lpX-50-qaB"/>
                                                                 <constraint firstAttribute="trailing" secondItem="hDa-BH-boY" secondAttribute="trailing" id="vyN-yQ-l7N"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
@@ -147,6 +151,7 @@
                             <constraint firstAttribute="trailing" secondItem="5gW-Nt-4Ek" secondAttribute="trailing" id="130-bn-iks"/>
                             <constraint firstItem="iGe-aC-4rb" firstAttribute="height" secondItem="Cf8-7d-M6u" secondAttribute="height" multiplier="0.35" id="2cu-kT-Dir"/>
                             <constraint firstItem="5gW-Nt-4Ek" firstAttribute="leading" secondItem="rev-ih-lkG" secondAttribute="leading" id="3uD-Z6-OGg"/>
+                            <constraint firstItem="XKx-Nj-z9n" firstAttribute="height" secondItem="Cf8-7d-M6u" secondAttribute="height" multiplier="0.11" id="OBp-FM-zAc"/>
                             <constraint firstItem="5gW-Nt-4Ek" firstAttribute="top" secondItem="rev-ih-lkG" secondAttribute="top" id="Ybz-d6-bhs"/>
                             <constraint firstItem="rev-ih-lkG" firstAttribute="bottom" secondItem="5gW-Nt-4Ek" secondAttribute="bottom" id="rAH-Qy-imF"/>
                         </constraints>

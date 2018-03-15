@@ -70,12 +70,24 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
     
     
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    /*func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 100.0
+        if DeviceType.IS_IPHONE_6P {
+            return 200.0
+        }else{
+            return 100.0
+        }
         
-    }
+        
+    }*/
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DeviceType.IS_IPHONE_6P {
+            return 105.0
+        }else{
+            return 90.0
+        }
+    }
     
     
     

@@ -133,10 +133,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y98-yI-gjS">
-                                                    <rect key="frame" x="127.5" y="62" width="242.5" height="80"/>
+                                                    <rect key="frame" x="127.5" y="62" width="242.5" height="72"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tbl3" translatesAutoresizingMaskIntoConstraints="NO" id="Hnn-PA-MSK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="242.5" height="80"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="242.5" height="72"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,7 +148,12 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tbl2" translatesAutoresizingMaskIntoConstraints="NO" id="DEH-fF-tGD">
-                                                    <rect key="frame" x="5" y="62" width="121.5" height="80"/>
+                                                    <rect key="frame" x="5" y="61" width="121.5" height="72"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -156,10 +161,12 @@
                                                 <constraint firstItem="afh-td-3KG" firstAttribute="leading" secondItem="o26-Mm-Ayu" secondAttribute="leading" constant="5" id="3Cy-Dh-M7Y"/>
                                                 <constraint firstItem="y98-yI-gjS" firstAttribute="leading" secondItem="DEH-fF-tGD" secondAttribute="trailing" constant="1" id="5Gv-K6-QEB"/>
                                                 <constraint firstAttribute="trailing" secondItem="y98-yI-gjS" secondAttribute="trailing" constant="5" id="9e0-KD-lVx"/>
-                                                <constraint firstAttribute="bottom" secondItem="DEH-fF-tGD" secondAttribute="bottom" constant="1.5" id="FVl-EW-cNX"/>
+                                                <constraint firstItem="DEH-fF-tGD" firstAttribute="height" secondItem="Hnn-PA-MSK" secondAttribute="height" id="Ch6-8C-3Qd"/>
+                                                <constraint firstAttribute="bottom" secondItem="DEH-fF-tGD" secondAttribute="bottom" constant="2.5" id="FVl-EW-cNX"/>
                                                 <constraint firstItem="DEH-fF-tGD" firstAttribute="width" secondItem="y98-yI-gjS" secondAttribute="width" multiplier="0.5" id="HKe-1a-WJF"/>
+                                                <constraint firstItem="PgS-5K-SoI" firstAttribute="height" secondItem="Hnn-PA-MSK" secondAttribute="height" multiplier="0.7" id="Ki7-3M-TVE"/>
                                                 <constraint firstItem="y98-yI-gjS" firstAttribute="top" secondItem="afh-td-3KG" secondAttribute="bottom" constant="2" id="Q8P-bU-th7"/>
-                                                <constraint firstItem="DEH-fF-tGD" firstAttribute="top" secondItem="afh-td-3KG" secondAttribute="bottom" constant="2" id="UFf-gC-seE"/>
+                                                <constraint firstItem="DEH-fF-tGD" firstAttribute="top" secondItem="afh-td-3KG" secondAttribute="bottom" constant="1" id="UFf-gC-seE"/>
                                                 <constraint firstItem="afh-td-3KG" firstAttribute="top" secondItem="o26-Mm-Ayu" secondAttribute="top" id="qIn-wt-FCw"/>
                                                 <constraint firstAttribute="trailing" secondItem="afh-td-3KG" secondAttribute="trailing" constant="5" id="sJw-B3-RBj"/>
                                                 <constraint firstItem="DEH-fF-tGD" firstAttribute="leading" secondItem="o26-Mm-Ayu" secondAttribute="leading" constant="5" id="zTH-Ks-zcG"/>

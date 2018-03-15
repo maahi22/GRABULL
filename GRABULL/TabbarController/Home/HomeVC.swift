@@ -183,13 +183,21 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     
     
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 144.0
-        
+    /*func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DeviceType.IS_IPHONE_6P {
+            return 168.0
+        }else{
+            return 144.0
+        }
+    }*/
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DeviceType.IS_IPHONE_6P {
+            return 153.0
+        }else{
+            return 144.0
+        }
     }
-    
-    
     
     
     @available(iOS 2.0, *)
