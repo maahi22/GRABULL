@@ -25,12 +25,13 @@ class MenuItemsVC: UIViewController {
         super.viewDidLoad()
 
         
-        sectionNames = [ "iPhone", "iPad", "Apple Watch" ];
+        sectionNames = [ "Soup & Thupka", "Snaks","Brekfast", "Lunch", "Dinner" ];
         sectionItems = [ ["iPhone 5", "iPhone 5s", "iPhone 6", "iPhone 6 Plus", "iPhone 7", "iPhone 7 Plus"],
                          ["iPad Mini", "iPad Air 2", "iPad Pro", "iPad Pro 9.7"],
-                         ["Apple Watch", "Apple Watch 2", "Apple Watch 2 (Nike)"]
-        ];
-        self.menuTableView!.tableFooterView = UIView()
+                         ["Apple Watch", "Apple Watch 2", "Apple Watch 2 (Nike)"],
+                          ["Apple Watch", "Apple Watch 2", "Apple Watch 2 (Nike)"],
+                           ["Apple Watch", "Apple Watch 2", "Apple Watch 2 (Nike)"]];
+     //   self.menuTableView!.tableFooterView = UIView()
         
        /* self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -73,7 +74,26 @@ private let reuseCartCell = "CartCell"
 
 extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
     
-    
+   
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        if(velocity.y>0) {
+            //Code will work without the animation block.I am using animation block incase if you want to set any delay to it.
+            UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                print("Hide")
+            }, completion: nil)
+            
+        } else {
+            UIView.animate(withDuration: 2.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+                self.navigationController?.setToolbarHidden(false, animated: true)
+                print("Unhide")
+            }, completion: nil)
+        }
+    }
+
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -94,32 +114,33 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (self.sectionNames.count != 0) {
-            return "Chilli potato"//self.sectionNames[section] as? String
+            return self.sectionNames[section] as? String
         }
         return ""
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0;
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
-        return 0;
+        return 1
     }
     
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         //recast your view as a UITableViewHeaderFooterView
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor.hexStringToUIColor(hex: "#408000")
-        header.textLabel?.textColor = UIColor.white
+        //header.contentView.backgroundColor = UIColor.hexStringToUIColor(hex: "#408000")
+        header.textLabel?.textColor = UIColor.black
         
         if let viewWithTag = self.view.viewWithTag(kHeaderSectionTag + section) {
             viewWithTag.removeFromSuperview()
         }
         let headerFrame = self.view.frame.size
-        let theImageView = UIImageView(frame: CGRect(x: headerFrame.width - 32, y: 13, width: 18, height: 18));
-        theImageView.image = UIImage(named: "Chevron-Dn-Wht")
+        let theImageView = UIImageView(frame: CGRect(x: headerFrame.width - 32, y: 31, width: 18, height: 18));
+        theImageView.image = UIImage(named: "openSection")?.withRenderingMode(.alwaysTemplate)
+        theImageView.tintColor = UIColor.hexStringToUIColor(hex: navigationBarColor)
         theImageView.tag = kHeaderSectionTag + section
         header.addSubview(theImageView)
         
@@ -200,6 +221,13 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        let separatorView = UIView(frame: CGRect(x: tableView.separatorInset.left, y: footerView.frame.height, width: tableView.frame.width - tableView.separatorInset.right, height: 1))
+        separatorView.backgroundColor = UIColor.lightGray
+        footerView.addSubview(separatorView)
+        return footerView
+    }
     
     /*func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
