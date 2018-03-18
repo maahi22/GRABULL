@@ -15,6 +15,10 @@
 		0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */; };
 		0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CBF20583FAC006FA4AF /* CartCell.swift */; };
 		0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CC120584E29006FA4AF /* LocationManager.swift */; };
+		0F265378205E9BB700D7E7DA /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F265377205E9BB700D7E7DA /* CommonHelper.swift */; };
+		0F26537B205EC92900D7E7DA /* CheckoutItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537A205EC92900D7E7DA /* CheckoutItemCell.swift */; };
+		0F26537D205EC95400D7E7DA /* ChekoutTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537C205EC95400D7E7DA /* ChekoutTotalCell.swift */; };
+		0F26537F205EC97500D7E7DA /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537E205EC97500D7E7DA /* DeliveryCell.swift */; };
 		189D6DF720579BD000AA7ECA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF620579BD000AA7ECA /* Login.storyboard */; };
 		189D6DF920579BEA00AA7ECA /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6DF820579BEA00AA7ECA /* Registration.storyboard */; };
 		189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D6DFA20579C3100AA7ECA /* LoginVC.swift */; };
@@ -90,6 +94,10 @@
 		0F177CBD20583A78006FA4AF /* PaymentTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeVC.swift; sourceTree = "<group>"; };
 		0F177CBF20583FAC006FA4AF /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		0F177CC120584E29006FA4AF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0F265377205E9BB700D7E7DA /* CommonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
+		0F26537A205EC92900D7E7DA /* CheckoutItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemCell.swift; sourceTree = "<group>"; };
+		0F26537C205EC95400D7E7DA /* ChekoutTotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutTotalCell.swift; sourceTree = "<group>"; };
+		0F26537E205EC97500D7E7DA /* DeliveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCell.swift; sourceTree = "<group>"; };
 		189D6DF620579BD000AA7ECA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		189D6DF820579BEA00AA7ECA /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		189D6DFA20579C3100AA7ECA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -212,6 +220,16 @@
 			path = PaymentMethod;
 			sourceTree = "<group>";
 		};
+		0F265379205EC54200D7E7DA /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				0F26537A205EC92900D7E7DA /* CheckoutItemCell.swift */,
+				0F26537C205EC95400D7E7DA /* ChekoutTotalCell.swift */,
+				0F26537E205EC97500D7E7DA /* DeliveryCell.swift */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
 		189D6DF420579B7000AA7ECA /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,9 +251,9 @@
 		189D6E002057B86200AA7ECA /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
+				189D6E272057DA1600AA7ECA /* ResturentMenu */,
 				189D6E322057FC2F00AA7ECA /* AddItem */,
 				189D6E2C2057E7E000AA7ECA /* Cell */,
-				189D6E272057DA1600AA7ECA /* ResturentMenu */,
 				189D6E162057BC5A00AA7ECA /* Tab */,
 				189D6E082057BAF800AA7ECA /* MyProfile */,
 				189D6E072057BA6900AA7ECA /* History */,
@@ -325,6 +343,7 @@
 		189D6E2C2057E7E000AA7ECA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0F265379205EC54200D7E7DA /* CheckOut */,
 				189D6E2D2057E84400AA7ECA /* ResturentCell.swift */,
 				189D6E2F2057E89800AA7ECA /* ResturentCollCell.swift */,
 				0F177CBF20583FAC006FA4AF /* CartCell.swift */,
@@ -409,6 +428,7 @@
 			children = (
 				18FEF6D6205A4A790026D61E /* ConnectionHelper.swift */,
 				18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */,
+				0F265377205E9BB700D7E7DA /* CommonHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -793,14 +813,18 @@
 				18FEF6DC205A71010026D61E /* AboutUsVC.swift in Sources */,
 				189D6E0A2057BB2A00AA7ECA /* MyProfileVC.swift in Sources */,
 				18CC38D8205947A80026A3B2 /* TextField.swift in Sources */,
+				0F26537B205EC92900D7E7DA /* CheckoutItemCell.swift in Sources */,
 				189D6E032057B9D000AA7ECA /* HomeVC.swift in Sources */,
+				0F26537F205EC97500D7E7DA /* DeliveryCell.swift in Sources */,
 				189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */,
+				0F265378205E9BB700D7E7DA /* CommonHelper.swift in Sources */,
 				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
 				0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
 				18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */,
 				18CC38D1205940E60026A3B2 /* DefaultDataManager.swift in Sources */,
+				0F26537D205EC95400D7E7DA /* ChekoutTotalCell.swift in Sources */,
 				189D6E2E2057E84400AA7ECA /* ResturentCell.swift in Sources */,
 				18B9C4C420579555004CEDA5 /* GRABULL.xcdatamodeld in Sources */,
 				18CC38D7205947A80026A3B2 /* UIView+CardView.swift in Sources */,
@@ -971,7 +995,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VAWH7R9NX3;
+				DEVELOPMENT_TEAM = 6J7UZY2EAL;
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -988,7 +1012,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VAWH7R9NX3;
+				DEVELOPMENT_TEAM = 6J7UZY2EAL;
 				INFOPLIST_FILE = GRABULL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

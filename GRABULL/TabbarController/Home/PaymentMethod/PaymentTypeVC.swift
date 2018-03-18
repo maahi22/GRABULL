@@ -11,7 +11,7 @@ import UIKit
 class PaymentTypeVC: UIViewController {
 
     @IBOutlet weak var paymentTable: UITableView!
-    var paymentArray = [["icon":"CreditCard","segu":"toCredit Card","text":"Credit Card"],["icon":"Debitcard","segu":"toDebitcard","text":"Debit card"], ["icon":"NetBanking","segu":"toNetBanking","text":"Net Banking"]]
+    var paymentArray = [["icon":"Creditcard","segu":"toCredit Card","text":"Credit Card"],["icon":"Creditcard","segu":"toDebitcard","text":"Debit card"], ["icon":"Netbanking","segu":"toNetBanking","text":"Net Banking"]]
     
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ extension PaymentTypeVC : UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 50
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -88,7 +88,8 @@ extension PaymentTypeVC : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath )
         let dic = paymentArray[indexPath.row]
         cell.textLabel?.text = dic["text"]
-        
+        let img = UIImage.init(named: dic["icon"]!)
+        cell.imageView?.image = img
         return cell
     }
     

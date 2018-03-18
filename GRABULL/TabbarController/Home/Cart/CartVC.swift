@@ -33,7 +33,7 @@ class CartVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        sectionNames = [ "Soup & Thupka", "Snaks","Brekfast", "Lunch", "Dinner" ];
+        sectionNames = [ "Soup & Thupka", "Snacks","Brekfast", "Lunch", "Dinner" ];
         sectionItems = [ ["iPhone 5", "iPhone 5s", "iPhone 6", "iPhone 6 Plus", "iPhone 7", "iPhone 7 Plus"],
                          ["iPad Mini", "iPad Air 2", "iPad Pro", "iPad Pro 9.7"],
                          ["Apple Watch", "Apple Watch 2", "Apple Watch 2 (Nike)"],

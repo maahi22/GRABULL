@@ -262,11 +262,29 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     
+     func draw(_ rect: CGRect) {
+        
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        
+        context.beginPath()
+        context.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        context.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+        context.addLine(to: CGPoint(x: (rect.minX), y: rect.maxY))
+        context.closePath()
+        
+        context.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        context.fillPath()
+    }
+    
     
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CartCell = tableView.dequeueReusableCell(withIdentifier: reuseCartCell, for: indexPath) as! CartCell
+       /* let rec = CGRect(x: 0, y: 0, width: 50, height: 30)
+        let corner:UIView = UIView.init(frame: rec)
+        corner.draw(rec)
+        cell.contentView.addSubview(corner)*/
         
         return cell
     }
