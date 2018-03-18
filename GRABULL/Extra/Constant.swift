@@ -10,7 +10,7 @@ import Foundation
 
 let navigationBarColor = "#D0001A"
 
-
+let greenColor = "#34C25F"
 
 //API
 let baseUrl = ""

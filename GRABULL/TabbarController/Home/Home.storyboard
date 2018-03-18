@@ -196,7 +196,7 @@
                                                             </constraints>
                                                         </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgS-Ab-CbX">
-                                                            <rect key="frame" x="297" y="3" width="65" height="18"/>
+                                                            <rect key="frame" x="297" y="11" width="65" height="18"/>
                                                             <color key="backgroundColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="65" id="U5g-0k-JxF"/>
@@ -270,7 +270,7 @@
                                                         <constraint firstItem="E0b-xw-eQs" firstAttribute="leading" secondItem="cuZ-ne-msu" secondAttribute="trailing" id="H36-cW-ryV"/>
                                                         <constraint firstItem="6IW-5O-3hA" firstAttribute="leading" secondItem="kRI-4z-uKG" secondAttribute="trailing" constant="4" id="IvZ-7X-9Dd"/>
                                                         <constraint firstAttribute="bottom" secondItem="kRI-4z-uKG" secondAttribute="bottom" constant="5" id="Mcm-re-yFq"/>
-                                                        <constraint firstItem="XgS-Ab-CbX" firstAttribute="top" secondItem="afh-td-3KG" secondAttribute="top" constant="3" id="Mg5-dt-sGQ"/>
+                                                        <constraint firstItem="XgS-Ab-CbX" firstAttribute="top" secondItem="afh-td-3KG" secondAttribute="top" constant="11" id="Mg5-dt-sGQ"/>
                                                         <constraint firstItem="cuZ-ne-msu" firstAttribute="leading" secondItem="kRI-4z-uKG" secondAttribute="trailing" constant="5" id="XbT-U7-z5x"/>
                                                         <constraint firstAttribute="trailing" secondItem="XgS-Ab-CbX" secondAttribute="trailing" constant="3" id="dfQ-Er-6Vi"/>
                                                         <constraint firstAttribute="trailing" secondItem="6IW-5O-3hA" secondAttribute="trailing" constant="80" id="hfa-dz-qSa"/>
