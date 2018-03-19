@@ -64,6 +64,25 @@ extension CheckOutVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         return 3
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+        
+        if section == 0 {
+            return CGSize(width: self.checkOutCollView.bounds.width, height: 1.0)
+        }else if section == 1{
+            return CGSize(width: self.checkOutCollView.bounds.width, height: 1.0)
+        }else{
+            
+            return CGSize(width: self.checkOutCollView.bounds.width, height: 5.0)
+        }
+        
+        
+    }
+
+    
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -96,7 +115,7 @@ extension CheckOutVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
      
-     let padding: CGFloat = 5
+     let padding: CGFloat = 10
      let collectionCellSize = collectionView.frame.size.width - padding
         var height = collectionView.frame.size.height
         if indexPath.section == 0 {

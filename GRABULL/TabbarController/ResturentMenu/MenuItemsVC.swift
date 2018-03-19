@@ -270,7 +270,7 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
         
         let cell:CartCell = tableView.dequeueReusableCell(withIdentifier: reuseCartCell, for: indexPath) as! CartCell
         
-        var view = MyCustomView(frame: CGRect(x: (cell.frame.size.width - 50), y: 0, width: 50, height: 50))
+        var view = TriangleView(frame: CGRect(x: (cell.frame.size.width - 50), y: 0, width: 50, height: 50))
         view.backgroundColor = UIColor.hexStringToUIColor(hex: greenColor)
        /* let rec = CGRect(x: 0, y: 0, width: 50, height: 30)
         let corner:UIView = UIView.init(frame: rec)
@@ -303,33 +303,9 @@ extension MenuItemsVC:UITableViewDelegate,UITableViewDataSource{
             }
          })
         
-        
         /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController?.present(viewController, animated: true, completion: nil)*/
     }
-    
-    
 }
-
-//https://stackoverflow.com/questions/20461918/draw-triangle-as-subview-to-right-corner-of-table-cell
-class MyCustomView :UIView{
-    
-    //Write your code in drawRect
-    override func draw(_ rect: CGRect) {
-        
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-        context.beginPath()
-        context.move(to: CGPoint(x: rect.minX, y: rect.minY))
-        context.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        context.addLine(to: CGPoint(x: (rect.minX), y: rect.maxY))
-        context.closePath()
-        
-        context.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        context.fillPath()
-    }
-    
-}
-
 
 

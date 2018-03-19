@@ -319,7 +319,9 @@ extension CartVC:UITableViewDelegate,UITableViewDataSource{
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CartCell = tableView.dequeueReusableCell(withIdentifier: reuseCartCell, for: indexPath) as! CartCell
-        
+        var view = TriangleView(frame: CGRect(x: (cell.frame.size.width - 50), y: 0, width: 50, height: 50))
+        view.backgroundColor = UIColor.hexStringToUIColor(hex: greenColor)
+        cell.contentView.addSubview(view)
         return cell
     }
     
