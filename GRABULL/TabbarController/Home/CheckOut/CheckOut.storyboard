@@ -309,6 +309,9 @@
                                                                     </constraints>
                                                                     <color key="tintColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <state key="normal" image="radioOn"/>
+                                                                    <connections>
+                                                                        <action selector="defaultChangeClick:" destination="41j-8U-uPZ" eventType="touchUpInside" id="ZxP-zf-Utv"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-Rw-6cf">
                                                                     <rect key="frame" x="10" y="124" width="57" height="30"/>
