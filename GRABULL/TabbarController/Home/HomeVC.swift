@@ -120,6 +120,16 @@ class HomeVC: UIViewController {
     
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -222,6 +232,8 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     let mainStoryBoard = UIStoryboard(name: "MenuItems", bundle: nil)
     let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MenuItemsVC") as! MenuItemsVC
     self.navigationController?.pushViewController(ViewController, animated: true)
+    //self.tabBarItem.accessibilityElementsHidden = true
+    self.tabBarController?.tabBar.isHidden = true
     }
     
     

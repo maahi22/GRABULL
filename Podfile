@@ -11,7 +11,11 @@ target 'GRABULL' do
 	pod 'Crashlytics'
     pod 'IQKeyboardManagerSwift'
 
-
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'TwitterKit'
+    
+    
   target 'GRABULLTests' do
     inherit! :search_paths
     # Pods for testing

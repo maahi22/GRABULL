@@ -37,7 +37,7 @@
                                                         <constraint firstAttribute="width" secondItem="ovd-S6-t13" secondAttribute="height" multiplier="18:17" id="I0c-Et-83s"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.20392156859999999" green="0.76078431369999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" image="radioOn"/>
+                                                    <state key="normal" image="sqRadioOn"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chilly Potato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-X6-IAv">
                                                     <rect key="frame" x="35" y="3" width="295" height="35"/>
@@ -194,6 +194,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="radioOn" width="20" height="20"/>
+        <image name="sqRadioOn" width="30" height="30"/>
     </resources>
 </document>

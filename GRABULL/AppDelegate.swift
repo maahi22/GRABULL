@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
+import TwitterCore
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,9 +26,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
+    //CORE DATA methods
+    
+    
+    
+    
+    //ENDED
+    
+    
+    
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return Twitter.sharedInstance().application(app, open: url, options: options)
+        
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
+        
+        
+        //Twitter
+        /*Twitter.sharedInstance().start(with: kTwitterConsumerKey, consumerSecret: kTwitterConsumerSecret)
+        Fabric.with([Twitter.sharedInstance()])*/
+        //http://www.brewit9.com/2017/10/twitter-login-integration-in-ios-using.html
+        Twitter.sharedInstance().start(withConsumerKey:kTwitterConsumerKey, consumerSecret:kTwitterConsumerSecret)
+
+        
+        
         
         /*if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)

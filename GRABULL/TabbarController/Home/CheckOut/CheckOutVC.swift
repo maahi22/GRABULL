@@ -120,7 +120,7 @@ extension CheckOutVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         var height = collectionView.frame.size.height
         if indexPath.section == 0 {
              height = 40.0
-        }else if indexPath.section == 1{
+        }else if indexPath.section == 1{ 
             height = 240.0
         }else{
             

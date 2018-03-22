@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Address List-->
+        <scene sceneID="Rbj-Qy-faQ">
+            <objects>
+                <viewController storyboardIdentifier="AddressList" id="nkl-8e-KVx" customClass="AddressList" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C4B-Pf-66u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MUL-8o-0X3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Yz-9m-lFQ">
+                                    <size key="itemSize" width="351" height="158"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeliveryCell" id="ZdU-28-TDn" customClass="DeliveryCell" customModule="GRABULL" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="10" width="351" height="164"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="351" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-Q9-Ndq">
+                                                    <rect key="frame" x="10" y="7" width="336" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0Ij-1z-2qR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Flat no/ House No. : 34  \n Mugal Garden \n Vaishali\n 110096" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-1z-dv4">
+                                                    <rect key="frame" x="10" y="33" width="281" height="81"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-Ym-ocf">
+                                                    <rect key="frame" x="311" y="124" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="iA2-Z7-eXY"/>
+                                                        <constraint firstAttribute="width" constant="30" id="iwg-gr-9dn"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="radioOff"/>
+                                                    <connections>
+                                                        <action selector="defaultChangeClick:" destination="ZdU-28-TDn" eventType="touchUpInside" id="AJr-VE-QQv"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-rt-kcd">
+                                                    <rect key="frame" x="10" y="124" width="57" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="a0F-on-hWq"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Change ">
+                                                        <color key="titleColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zNZ-1z-dv4" firstAttribute="leading" secondItem="ZdU-28-TDn" secondAttribute="leading" constant="10" id="6qN-30-LlN"/>
+                                            <constraint firstAttribute="bottom" secondItem="YCa-Ym-ocf" secondAttribute="bottom" constant="10" id="Bs9-ph-m9a"/>
+                                            <constraint firstAttribute="trailing" secondItem="zNZ-1z-dv4" secondAttribute="trailing" constant="60" id="EkL-m6-gMs"/>
+                                            <constraint firstItem="zNZ-1z-dv4" firstAttribute="top" secondItem="9XS-Q9-Ndq" secondAttribute="bottom" constant="5" id="LcL-eH-VUq"/>
+                                            <constraint firstItem="9XS-Q9-Ndq" firstAttribute="top" secondItem="ZdU-28-TDn" secondAttribute="top" constant="7" id="OiD-9M-ONu"/>
+                                            <constraint firstAttribute="trailing" secondItem="9XS-Q9-Ndq" secondAttribute="trailing" constant="5" id="SNg-EK-9x4"/>
+                                            <constraint firstItem="n3G-rt-kcd" firstAttribute="top" secondItem="zNZ-1z-dv4" secondAttribute="bottom" constant="10" id="Scu-Lb-oqk"/>
+                                            <constraint firstAttribute="trailing" secondItem="YCa-Ym-ocf" secondAttribute="trailing" constant="10" id="VRi-wv-k1h"/>
+                                            <constraint firstItem="9XS-Q9-Ndq" firstAttribute="leading" secondItem="ZdU-28-TDn" secondAttribute="leading" constant="10" id="eHS-J8-1tG"/>
+                                            <constraint firstAttribute="bottom" secondItem="n3G-rt-kcd" secondAttribute="bottom" constant="10" id="eQD-dn-oLp"/>
+                                            <constraint firstItem="n3G-rt-kcd" firstAttribute="leading" secondItem="ZdU-28-TDn" secondAttribute="leading" constant="10" id="tqk-r7-NQf"/>
+                                        </constraints>
+                                        <size key="customSize" width="351" height="164"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="btnChange" destination="n3G-rt-kcd" id="VcS-7H-314"/>
+                                            <outlet property="btnDefault" destination="YCa-Ym-ocf" id="8JH-jI-Cap"/>
+                                            <outlet property="txtViewAddress" destination="zNZ-1z-dv4" id="wJA-Hj-f9O"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nkl-8e-KVx" id="rYa-zs-LSo"/>
+                                    <outlet property="delegate" destination="nkl-8e-KVx" id="3th-Zw-5fd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MUL-8o-0X3" firstAttribute="leading" secondItem="C9a-nn-t2M" secondAttribute="leading" id="4b1-o5-sAX"/>
+                            <constraint firstItem="MUL-8o-0X3" firstAttribute="top" secondItem="C9a-nn-t2M" secondAttribute="top" id="EVH-IA-Z52"/>
+                            <constraint firstItem="MUL-8o-0X3" firstAttribute="trailing" secondItem="C9a-nn-t2M" secondAttribute="trailing" id="LVM-0O-hQx"/>
+                            <constraint firstItem="MUL-8o-0X3" firstAttribute="bottom" secondItem="C9a-nn-t2M" secondAttribute="bottom" id="jel-1C-cVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C9a-nn-t2M"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X7i-2W-cUM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jtq-aN-m7A">
+                            <connections>
+                                <action selector="AddNewAddress:" destination="nkl-8e-KVx" id="jbJ-TD-K9Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addListCollView" destination="MUL-8o-0X3" id="JnI-K3-WKT"/>
+                        <outlet property="barButtonAdd" destination="Jtq-aN-m7A" id="yIO-U0-WV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7z-ZF-wXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="236.13193403298354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g3s-3F-J4l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UDi-qW-q2s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vR1-Pj-Rj5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nkl-8e-KVx" kind="relationship" relationship="rootViewController" id="zVw-Dr-kbU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bk8-u7-GqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="radioOff" width="20" height="20"/>
+    </resources>
+</document>

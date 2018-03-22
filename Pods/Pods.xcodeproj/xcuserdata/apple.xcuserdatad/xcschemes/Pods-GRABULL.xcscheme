@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E1707B916A8E6C562A96BF740D9063E"
+               BlueprintIdentifier = "2D2A4AA4DEE2A26D5BF31689AE868539"
                BuildableName = "Pods_GRABULL.framework"
                BlueprintName = "Pods-GRABULL"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E1707B916A8E6C562A96BF740D9063E"
+            BlueprintIdentifier = "2D2A4AA4DEE2A26D5BF31689AE868539"
             BuildableName = "Pods_GRABULL.framework"
             BlueprintName = "Pods-GRABULL"
             ReferencedContainer = "container:Pods.xcodeproj">

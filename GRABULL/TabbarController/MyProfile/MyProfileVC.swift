@@ -13,7 +13,7 @@ import MessageUI
 class MyProfileVC: UIViewController {
 
     var settingsArray = [["icon":"showProfile","segu":"toAboutstrataspot","text":"About Us"],["icon":"EditCompanyInformation","segu":"toEditCompanyInformation","text":"Help & Support"],
-                         ["icon":"EditClientInformation","segu":"toEditClientInformation","text":"Feedback"] , ["icon":"showProfile","segu":"toPostFeedback","text":"Profile"], ["icon":"showProfile","segu":"toMailSettings","text":"Change Password"],["icon":"showProfile","segu":"toRouteenInspectonSettings","text":"Share"]]
+                         ["icon":"EditClientInformation","segu":"toEditClientInformation","text":"Feedback"] , ["icon":"showProfile","segu":"toPostFeedback","text":"Profile"], ["icon":"showProfile","segu":"toMailSettings","text":"Change Password"],["icon":"showProfile","segu":"toRouteenInspectonSettings","text":"Share"],["icon":"showAddress","segu":"toAddress","text":"Add Address"]]
     
     
     @IBOutlet weak var settingTableView: UITableView!
@@ -155,14 +155,21 @@ extension MyProfileVC : UITableViewDelegate, UITableViewDataSource,MFMailCompose
                 let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "AboutUsVC") as! AboutUsVC
                 self.navigationController?.pushViewController(ViewController, animated: true)
             }
-            if indexPath.row == 5 { //share
+           else if indexPath.row == 5 { //share
             
                 let shareLink = "share url"
                 let shareItems:Array = [shareLink] as [Any]
                 let activityVC = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
                 self.present(activityVC, animated: true, completion: nil)
                 
-            } else{
+            }
+            else if indexPath.row == 6 {
+                let mainStoryBoard = UIStoryboard(name: "AddressList", bundle: nil)
+                let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "AddressList") as! AddressList
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            
+            else{
            
                 self.sendFeedback()
        

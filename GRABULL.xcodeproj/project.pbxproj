@@ -52,6 +52,10 @@
 		18B9C4C920579555004CEDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B9C4C720579555004CEDA5 /* LaunchScreen.storyboard */; };
 		18B9C4D420579556004CEDA5 /* GRABULLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4D320579556004CEDA5 /* GRABULLTests.swift */; };
 		18B9C4DF20579556004CEDA5 /* GRABULLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4DE20579556004CEDA5 /* GRABULLUITests.swift */; };
+		18C79A782063949500DDDBDE /* EditAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C79A772063949500DDDBDE /* EditAddress.swift */; };
+		18C79A7A206394CF00DDDBDE /* EditAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C79A79206394CF00DDDBDE /* EditAddress.storyboard */; };
+		18C79A7C2063959B00DDDBDE /* AddressList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C79A7B2063959B00DDDBDE /* AddressList.storyboard */; };
+		18C79A7E206395DC00DDDBDE /* AddressList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C79A7D206395DC00DDDBDE /* AddressList.swift */; };
 		18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38CC20590DA70026A3B2 /* Constant.swift */; };
 		18CC38CF2059363F0026A3B2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38CE2059363F0026A3B2 /* View.swift */; };
 		18CC38D1205940E60026A3B2 /* DefaultDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */; };
@@ -138,6 +142,10 @@
 		18B9C4DA20579556004CEDA5 /* GRABULLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRABULLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B9C4DE20579556004CEDA5 /* GRABULLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRABULLUITests.swift; sourceTree = "<group>"; };
 		18B9C4E020579556004CEDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C79A772063949500DDDBDE /* EditAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddress.swift; sourceTree = "<group>"; };
+		18C79A79206394CF00DDDBDE /* EditAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditAddress.storyboard; sourceTree = "<group>"; };
+		18C79A7B2063959B00DDDBDE /* AddressList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddressList.storyboard; sourceTree = "<group>"; };
+		18C79A7D206395DC00DDDBDE /* AddressList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressList.swift; sourceTree = "<group>"; };
 		18CC38CC20590DA70026A3B2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		18CC38CE2059363F0026A3B2 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		18CC38D0205940E50026A3B2 /* DefaultDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataManager.swift; sourceTree = "<group>"; };
@@ -253,6 +261,7 @@
 		189D6E002057B86200AA7ECA /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
+				18C79A762063941A00DDDBDE /* Edit Address */,
 				189D6E272057DA1600AA7ECA /* ResturentMenu */,
 				189D6E322057FC2F00AA7ECA /* AddItem */,
 				189D6E2C2057E7E000AA7ECA /* Cell */,
@@ -423,6 +432,17 @@
 				18B9C4E020579556004CEDA5 /* Info.plist */,
 			);
 			path = GRABULLUITests;
+			sourceTree = "<group>";
+		};
+		18C79A762063941A00DDDBDE /* Edit Address */ = {
+			isa = PBXGroup;
+			children = (
+				18C79A772063949500DDDBDE /* EditAddress.swift */,
+				18C79A79206394CF00DDDBDE /* EditAddress.storyboard */,
+				18C79A7B2063959B00DDDBDE /* AddressList.storyboard */,
+				18C79A7D206395DC00DDDBDE /* AddressList.swift */,
+			);
+			path = "Edit Address";
 			sourceTree = "<group>";
 		};
 		18CC38C820590CCE0026A3B2 /* Helper */ = {
@@ -613,6 +633,7 @@
 				18B9C4C920579555004CEDA5 /* LaunchScreen.storyboard in Resources */,
 				189D6E242057D84700AA7ECA /* Cart.storyboard in Resources */,
 				0F177CB7205839EA006FA4AF /* Payment.storyboard in Resources */,
+				18C79A7A206394CF00DDDBDE /* EditAddress.storyboard in Resources */,
 				189D6E0F2057BB7200AA7ECA /* History.storyboard in Resources */,
 				189D6E152057BBC000AA7ECA /* Search.storyboard in Resources */,
 				189D6E292057DA5B00AA7ECA /* MenuItems.storyboard in Resources */,
@@ -621,6 +642,7 @@
 				189D6E052057B9E800AA7ECA /* Home.storyboard in Resources */,
 				189D6E0D2057BB4800AA7ECA /* MyProfile.storyboard in Resources */,
 				18B9C4C620579555004CEDA5 /* Assets.xcassets in Resources */,
+				18C79A7C2063959B00DDDBDE /* AddressList.storyboard in Resources */,
 				18B9C4C120579555004CEDA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,10 +704,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GRABULL/Pods-GRABULL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,9 +767,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GRABULL/Pods-GRABULL-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -805,6 +841,7 @@
 				18FEF6D5205A49C40026D61E /* Validations.swift in Sources */,
 				18B9C4BC20579555004CEDA5 /* AppDelegate.swift in Sources */,
 				18FEF6D9205A6E3E0026D61E /* HistoryCollCell.swift in Sources */,
+				18C79A782063949500DDDBDE /* EditAddress.swift in Sources */,
 				18CC38D6205947A70026A3B2 /* UIColor+KCSColor.swift in Sources */,
 				0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */,
 				189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */,
@@ -823,6 +860,7 @@
 				0F265378205E9BB700D7E7DA /* CommonHelper.swift in Sources */,
 				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
+				18C79A7E206395DC00DDDBDE /* AddressList.swift in Sources */,
 				0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
 				18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */,
