@@ -13,7 +13,7 @@ class CheckOutVC: UIViewController {
     @IBOutlet weak var checkOutCollView: UICollectionView!
     
     
-    
+    let sectionNames = [ "Soup & Thupka", "Snacks","Chilly Potato" ]
     
     
     override func viewDidLoad() {
@@ -100,13 +100,15 @@ extension CheckOutVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         
         if indexPath.section == 0 {
             let cell:CheckoutItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CheckoutItemCell", for: indexPath) as! CheckoutItemCell
+            cell.itemName.text = sectionNames[indexPath.row]
+            
             return cell
         }else if indexPath.section == 1 {
             let cell:ChekoutTotalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChekoutTotalCell", for: indexPath) as! ChekoutTotalCell
             return cell
         }else{
             let cell:DeliveryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DeliveryCell", for: indexPath) as! DeliveryCell
-            cell.txtViewAddress.text = "Flat no/ House No. : 34  \nMugal Garden \nVaishali\nPin:110096"
+            cell.txtViewAddress.text = "1960 W CHELSEA AVE STE 2006R\nALLENTOWN\nPennsylvania\n18104"
             return cell
         }
     }
