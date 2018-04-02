@@ -51,7 +51,14 @@ class HomeVC: UIViewController {
                 self?.locationManager.reverseGeocodeLocationWithLatLon(latitude: lat, longitude: lang, onReverseGeocodingCompletionHandler: { (placeresponceDict, placemark, Add) in
                     
                     
-                    guard  let address:String = placeresponceDict?.value(forKey: "formattedAddress") as! String else{
+                    if placeresponceDict == nil {
+                        return
+                    }
+                    
+                    
+                    
+                    
+                    guard  let address:String = placeresponceDict?.value(forKey: "formattedAddress") as? String else{
                         return
                     }
                     

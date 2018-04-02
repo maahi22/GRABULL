@@ -17,10 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="eA2-FS-tw1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3f-nh-tKR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" id="xhD-EN-5uO" customClass="SearchCell" customModule="GRABULL" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xhD-EN-5uO" id="x5z-1c-Zm5">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8To-FW-PJ0" id="apR-jo-yKn"/>
+                                    <outlet property="delegate" destination="8To-FW-PJ0" id="uMV-DN-hH4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L3f-nh-tKR" firstAttribute="leading" secondItem="hrJ-Jp-rwH" secondAttribute="leading" id="6of-ME-bFo"/>
+                            <constraint firstItem="L3f-nh-tKR" firstAttribute="top" secondItem="hrJ-Jp-rwH" secondAttribute="top" id="85g-K1-z2O"/>
+                            <constraint firstItem="hrJ-Jp-rwH" firstAttribute="bottom" secondItem="L3f-nh-tKR" secondAttribute="bottom" id="Zy7-h2-Eam"/>
+                            <constraint firstItem="hrJ-Jp-rwH" firstAttribute="trailing" secondItem="L3f-nh-tKR" secondAttribute="trailing" id="mtJ-3B-hCz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hrJ-Jp-rwH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="g7a-hq-7nT"/>
+                    <connections>
+                        <outlet property="tblViewSearch" destination="L3f-nh-tKR" id="Kq4-iJ-dcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGX-m9-0WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

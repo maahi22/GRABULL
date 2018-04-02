@@ -12,12 +12,10 @@ import MessageUI
 
 class MyProfileVC: UIViewController {
 
+    @IBOutlet weak var addressCollView: UICollectionView!
+    
     var settingsArray = [["icon":"showProfile","segu":"toAboutstrataspot","text":"About Us"],["icon":"EditCompanyInformation","segu":"toEditCompanyInformation","text":"Help & Support"],
                          ["icon":"EditClientInformation","segu":"toEditClientInformation","text":"Feedback"] , ["icon":"showProfile","segu":"toPostFeedback","text":"Profile"], ["icon":"showProfile","segu":"toMailSettings","text":"Change Password"],["icon":"showProfile","segu":"toRouteenInspectonSettings","text":"Share"],["icon":"showAddress","segu":"toAddress","text":"Add Address"]]
-    
-    
-    @IBOutlet weak var settingTableView: UITableView!
-    
     
     
     
@@ -30,9 +28,7 @@ class MyProfileVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if self.settingTableView.tableFooterView == nil {
-            settingTableView.tableFooterView = UIView(frame: CGRect.zero)
-        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +79,7 @@ class MyProfileVC: UIViewController {
     
 }
 
-
+/*
 extension MyProfileVC : UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -212,7 +208,65 @@ extension MyProfileVC : UITableViewDelegate, UITableViewDataSource,MFMailCompose
     }
     
 }
+*/
 
 
-
+extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    // MARK: UICollectionViewDataSource
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+        
+        return CGSize(width: self.addressCollView.bounds.width, height: 5.0)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 2
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:DeliveryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DeliveryCell", for: indexPath) as! DeliveryCell
+        cell.txtViewAddress.text = "1960 W CHELSEA AVE STE 2006R\nALLENTOWN\nPennsylvania\n18104"
+        return cell
+        
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let padding: CGFloat = 10
+        let collectionCellSize = collectionView.frame.size.width - padding
+        var height = collectionView.frame.size.height
+        height = 160.0
+        return CGSize(width: collectionCellSize, height: height)
+        
+        
+    }
+    
+    
+   /* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let mainStoryBoard = UIStoryboard(name: "EditAddress", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "EditAddress") as! EditAddress
+        viewController.editStatus = true
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }*/
+    
+}
 

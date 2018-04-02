@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+private let reuseCartCell = "SearchCell"
+
 class SearchVC: UIViewController {
 
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
@@ -15,10 +18,17 @@ class SearchVC: UIViewController {
     var latitude :Double = 0.0
     var longitude :Double = 0.0
     
+    @IBOutlet weak var tblViewSearch: UITableView!
+    var searchItems: Array<Any> = []
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchItems = [ "North Indian", "Chinese","Snaks", "Wraps", "Kebab", "Biryani","Sandwiches", "Italian", "Chily potato"  ];
+        
         searchBar.showsCancelButton = true
         searchBar.delegate = self
         searchBar.placeholder = "Enter Zip Code/city.."
@@ -135,3 +145,53 @@ extension SearchVC: UISearchBarDelegate{
     }
 }
 
+
+extension SearchVC:UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DeviceType.IS_IPHONE_6P {
+            return 75.0
+        }else{
+            return 70.0
+        }
+    }
+    
+    
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+            return searchItems.count;
+       
+        
+    }
+    
+    
+    
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseCartCell, for: indexPath) //as! UITableViewCell
+        cell.textLabel?.text = searchItems[indexPath.row] as! String
+       
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let mainStoryBoard = UIStoryboard(name: "DetailList", bundle: nil)
+        let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DetailsListVC") as! DetailsListVC
+        self.navigationController?.pushViewController(ViewController, animated: true)
+        
+    }
+    
+    
+}

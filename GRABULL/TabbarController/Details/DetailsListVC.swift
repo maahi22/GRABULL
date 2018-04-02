@@ -1,34 +1,31 @@
 //
-//  HistoryVC.swift
+//  DetailsListVC.swift
 //  GRABULL
 //
-//  Created by Apple on 13/03/18.
+//  Created by Maahi on 02/04/18.
 //  Copyright © 2018 m&PTeck. All rights reserved.
 //
 
 import UIKit
 
-class HistoryVC: UIViewController {
 
+private let reuseCollIdentifier =  "DetailCollCell"
+
+
+
+class DetailsListVC: UIViewController {
+
+    
+    @IBOutlet weak var detailListCollView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.callHistoryApi()
-        
-    }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,32 +41,11 @@ class HistoryVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
-    
-    func callHistoryApi()  {
-        
-        let token = DefaultDataManager.getDeviceToken()
-        let urlString = baseUrl + Api_Login
-        let deviceID = UIDevice.current.identifierForVendor!.uuidString
-        let paramString = ["DeviceId":deviceID,"token":token] as [String : Any]
-        
-       /* ConnectionHelper.KSCgetDataFromJson(url: urlString, paramString: paramString) { (responce, status) in
-            
-            
-            
-            
-        }*/
-        
-    }
-    
-    
 
 }
 
 
-extension HistoryVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension DetailsListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     // MARK: UICollectionViewDataSource
     
@@ -88,7 +64,7 @@ extension HistoryVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell:HistoryCollCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCollCell", for: indexPath) as! HistoryCollCell
+        let cell:DetailCollCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCollIdentifier, for: indexPath) as! DetailCollCell
         
         return cell
     }
@@ -112,10 +88,5 @@ extension HistoryVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     }
     
 }
-
-
-
-
-
 
 

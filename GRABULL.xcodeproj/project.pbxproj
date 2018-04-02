@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F16251C20728DD200E26778 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16251B20728DD200E26778 /* SearchCell.swift */; };
+		0F16251F2072929900E26778 /* DetailsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16251E2072929900E26778 /* DetailsListVC.swift */; };
+		0F162521207292A700E26778 /* DetailList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F162520207292A700E26778 /* DetailList.storyboard */; };
+		0F162523207293A900E26778 /* DetailCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F162522207293A900E26778 /* DetailCollCell.swift */; };
 		0F177CB2205839A8006FA4AF /* CheckOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CB1205839A8006FA4AF /* CheckOutVC.swift */; };
 		0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F177CB4205839DA006FA4AF /* PaymentVC.swift */; };
 		0F177CB7205839EA006FA4AF /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F177CB6205839EA006FA4AF /* Payment.storyboard */; };
@@ -91,6 +95,10 @@
 
 /* Begin PBXFileReference section */
 		07794C966096D7CEA7514FF0 /* Pods-GRABULL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRABULL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GRABULL/Pods-GRABULL.debug.xcconfig"; sourceTree = "<group>"; };
+		0F16251B20728DD200E26778 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		0F16251E2072929900E26778 /* DetailsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsListVC.swift; sourceTree = "<group>"; };
+		0F162520207292A700E26778 /* DetailList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailList.storyboard; sourceTree = "<group>"; };
+		0F162522207293A900E26778 /* DetailCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollCell.swift; sourceTree = "<group>"; };
 		0F177CB1205839A8006FA4AF /* CheckOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutVC.swift; sourceTree = "<group>"; };
 		0F177CB4205839DA006FA4AF /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		0F177CB6205839EA006FA4AF /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
@@ -195,6 +203,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F16251D2072927100E26778 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0F16251E2072929900E26778 /* DetailsListVC.swift */,
+				0F162520207292A700E26778 /* DetailList.storyboard */,
+				0F162522207293A900E26778 /* DetailCollCell.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		0F177CAF20583848006FA4AF /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +287,7 @@
 				189D6E082057BAF800AA7ECA /* MyProfile */,
 				189D6E072057BA6900AA7ECA /* History */,
 				189D6E062057B9F600AA7ECA /* Search */,
+				0F16251D2072927100E26778 /* Details */,
 				189D6E012057B88200AA7ECA /* Home */,
 			);
 			path = TabbarController;
@@ -359,6 +378,7 @@
 				189D6E2F2057E89800AA7ECA /* ResturentCollCell.swift */,
 				0F177CBF20583FAC006FA4AF /* CartCell.swift */,
 				18FEF6D8205A6E3E0026D61E /* HistoryCollCell.swift */,
+				0F16251B20728DD200E26778 /* SearchCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -642,6 +662,7 @@
 				189D6E052057B9E800AA7ECA /* Home.storyboard in Resources */,
 				189D6E0D2057BB4800AA7ECA /* MyProfile.storyboard in Resources */,
 				18B9C4C620579555004CEDA5 /* Assets.xcassets in Resources */,
+				0F162521207292A700E26778 /* DetailList.storyboard in Resources */,
 				18C79A7C2063959B00DDDBDE /* AddressList.storyboard in Resources */,
 				18B9C4C120579555004CEDA5 /* Main.storyboard in Resources */,
 			);
@@ -845,9 +866,11 @@
 				18CC38D6205947A70026A3B2 /* UIColor+KCSColor.swift in Sources */,
 				0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */,
 				189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */,
+				0F16251C20728DD200E26778 /* SearchCell.swift in Sources */,
 				18CC38CF2059363F0026A3B2 /* View.swift in Sources */,
 				18FEF6D7205A4A790026D61E /* ConnectionHelper.swift in Sources */,
 				189D6E182057BCB600AA7ECA /* TabBarControl.swift in Sources */,
+				0F16251F2072929900E26778 /* DetailsListVC.swift in Sources */,
 				189D6E132057BBAD00AA7ECA /* SearchVC.swift in Sources */,
 				0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */,
 				18FEF6DC205A71010026D61E /* AboutUsVC.swift in Sources */,
@@ -857,6 +880,7 @@
 				189D6E032057B9D000AA7ECA /* HomeVC.swift in Sources */,
 				0F26537F205EC97500D7E7DA /* DeliveryCell.swift in Sources */,
 				189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */,
+				0F162523207293A900E26778 /* DetailCollCell.swift in Sources */,
 				0F265378205E9BB700D7E7DA /* CommonHelper.swift in Sources */,
 				0F177CB5205839DA006FA4AF /* PaymentVC.swift in Sources */,
 				189D6E112057BB9400AA7ECA /* HistoryVC.swift in Sources */,
