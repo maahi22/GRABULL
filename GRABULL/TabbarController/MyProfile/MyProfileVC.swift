@@ -77,6 +77,28 @@ class MyProfileVC: UIViewController {
     
     
     
+    
+    
+    @IBAction func EditInfo(_ sender: Any) {
+        let mainStoryBoard = UIStoryboard(name: "EditInfo", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "EditInfoVC") as! EditInfoVC
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
+    @IBAction func changePassword(_ sender: Any) {
+       
+        let mainStoryBoard = UIStoryboard(name: "ChangePassword", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+        self.navigationController?.pushViewController(viewController, animated: true)
+    
+    }
+    
+    
+    @IBAction func AddNewAddress(_ sender: Any) {
+    }
+    
+    
 }
 
 /*
@@ -160,7 +182,7 @@ extension MyProfileVC : UITableViewDelegate, UITableViewDataSource,MFMailCompose
                 
             }
             else if indexPath.row == 6 {
-                let mainStoryBoard = UIStoryboard(name: "AddressList", bundle: nil)
+                let mainStoryBoard = UIStoryboard(name: "ChangePasswordVC", bundle: nil)
                 let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "AddressList") as! AddressList
                 self.navigationController?.pushViewController(viewController, animated: true)
             }

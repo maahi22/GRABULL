@@ -47,6 +47,10 @@
 		189D6E302057E89800AA7ECA /* ResturentCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D6E2F2057E89800AA7ECA /* ResturentCollCell.swift */; };
 		189D6E342057FC6800AA7ECA /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D6E332057FC6800AA7ECA /* AddItemVC.swift */; };
 		189D6E362057FC9200AA7ECA /* AddItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D6E352057FC9200AA7ECA /* AddItem.storyboard */; };
+		189FACD220733CE10061C5AC /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FACD120733CE10061C5AC /* ChangePasswordVC.swift */; };
+		189FACD420733CF40061C5AC /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189FACD320733CF40061C5AC /* ChangePassword.storyboard */; };
+		189FACD620733D6C0061C5AC /* EditInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189FACD520733D6C0061C5AC /* EditInfo.storyboard */; };
+		189FACD820733D7F0061C5AC /* EditInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FACD720733D7F0061C5AC /* EditInfoVC.swift */; };
 		18A4D6B0205F7F6D0002FAA9 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4D6AF205F7F6D0002FAA9 /* TriangleView.swift */; };
 		18B9C4BC20579555004CEDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4BB20579555004CEDA5 /* AppDelegate.swift */; };
 		18B9C4BE20579555004CEDA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9C4BD20579555004CEDA5 /* ViewController.swift */; };
@@ -135,6 +139,10 @@
 		189D6E2F2057E89800AA7ECA /* ResturentCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturentCollCell.swift; sourceTree = "<group>"; };
 		189D6E332057FC6800AA7ECA /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		189D6E352057FC9200AA7ECA /* AddItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddItem.storyboard; sourceTree = "<group>"; };
+		189FACD120733CE10061C5AC /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		189FACD320733CF40061C5AC /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		189FACD520733D6C0061C5AC /* EditInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditInfo.storyboard; sourceTree = "<group>"; };
+		189FACD720733D7F0061C5AC /* EditInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoVC.swift; sourceTree = "<group>"; };
 		18A4D6AF205F7F6D0002FAA9 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		18B9C4B820579555004CEDA5 /* GRABULL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GRABULL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B9C4BB20579555004CEDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -501,6 +509,10 @@
 			children = (
 				18FEF6DB205A71010026D61E /* AboutUsVC.swift */,
 				18FEF6DD205A71440026D61E /* AboutUs.storyboard */,
+				189FACD120733CE10061C5AC /* ChangePasswordVC.swift */,
+				189FACD320733CF40061C5AC /* ChangePassword.storyboard */,
+				189FACD520733D6C0061C5AC /* EditInfo.storyboard */,
+				189FACD720733D7F0061C5AC /* EditInfoVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -647,6 +659,7 @@
 				0F177CB9205839FD006FA4AF /* CheckOut.storyboard in Resources */,
 				189D6E1A2057BD1200AA7ECA /* TabBar.storyboard in Resources */,
 				189D6DF920579BEA00AA7ECA /* Registration.storyboard in Resources */,
+				189FACD420733CF40061C5AC /* ChangePassword.storyboard in Resources */,
 				0F177CBC20583A5F006FA4AF /* PaymentType.storyboard in Resources */,
 				189D6DF720579BD000AA7ECA /* Login.storyboard in Resources */,
 				189D6E362057FC9200AA7ECA /* AddItem.storyboard in Resources */,
@@ -656,6 +669,7 @@
 				18C79A7A206394CF00DDDBDE /* EditAddress.storyboard in Resources */,
 				189D6E0F2057BB7200AA7ECA /* History.storyboard in Resources */,
 				189D6E152057BBC000AA7ECA /* Search.storyboard in Resources */,
+				189FACD620733D6C0061C5AC /* EditInfo.storyboard in Resources */,
 				189D6E292057DA5B00AA7ECA /* MenuItems.storyboard in Resources */,
 				18FEF6DE205A71440026D61E /* AboutUs.storyboard in Resources */,
 				189D6E1D2057D71200AA7ECA /* Filters.storyboard in Resources */,
@@ -870,6 +884,7 @@
 				18CC38CF2059363F0026A3B2 /* View.swift in Sources */,
 				18FEF6D7205A4A790026D61E /* ConnectionHelper.swift in Sources */,
 				189D6E182057BCB600AA7ECA /* TabBarControl.swift in Sources */,
+				189FACD820733D7F0061C5AC /* EditInfoVC.swift in Sources */,
 				0F16251F2072929900E26778 /* DetailsListVC.swift in Sources */,
 				189D6E132057BBAD00AA7ECA /* SearchVC.swift in Sources */,
 				0F177CC020583FAC006FA4AF /* CartCell.swift in Sources */,
@@ -888,6 +903,7 @@
 				0F177CC220584E29006FA4AF /* LocationManager.swift in Sources */,
 				189D6DFD20579C6200AA7ECA /* RegistrationVC.swift in Sources */,
 				18CC38CD20590DA70026A3B2 /* Constant.swift in Sources */,
+				189FACD220733CE10061C5AC /* ChangePasswordVC.swift in Sources */,
 				18CC38D1205940E60026A3B2 /* DefaultDataManager.swift in Sources */,
 				0F26537D205EC95400D7E7DA /* ChekoutTotalCell.swift in Sources */,
 				189D6E2E2057E84400AA7ECA /* ResturentCell.swift in Sources */,

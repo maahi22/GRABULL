@@ -35,6 +35,9 @@
                                                         </constraints>
                                                         <color key="tintColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="EditIcon"/>
+                                                        <connections>
+                                                            <action selector="EditInfo:" destination="Bta-Wb-1t7" eventType="touchUpInside" id="Dl7-ea-iyF"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subh degital pvt ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-rk-JSl">
                                                         <rect key="frame" x="10" y="5" width="305" height="35"/>
@@ -99,6 +102,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXI-Vs-6Oq">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                        <connections>
+                                                            <action selector="changePassword:" destination="Bta-Wb-1t7" eventType="touchUpInside" id="GUa-Gr-nEq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,6 +208,9 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                             <color key="tintColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="+"/>
+                                                            <connections>
+                                                                <action selector="AddNewAddress:" destination="Bta-Wb-1t7" eventType="touchUpInside" id="ony-4U-Eh6"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NEW ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK4-rU-XFK">
                                                             <rect key="frame" x="10" y="10" width="305" height="30"/>
