@@ -13,7 +13,8 @@ private let reuseCartCell = "SearchCell"
 
 class SearchVC: UIViewController {
 
-    lazy var searchBar = UISearchBar(frame: CGRect.zero)
+    @IBOutlet weak var searchBar: UISearchBar!
+    // lazy var searchBar = UISearchBar(frame: CGRect.zero)
     var locationManager = LocationManager.sharedInstance
     var latitude :Double = 0.0
     var longitude :Double = 0.0
@@ -29,10 +30,10 @@ class SearchVC: UIViewController {
 
         searchItems = [ "North Indian", "Chinese","Snaks", "Wraps", "Kebab", "Biryani","Sandwiches", "Italian", "Chily potato"  ];
         
-        searchBar.showsCancelButton = true
+        /*searchBar.showsCancelButton = true
         searchBar.delegate = self
         searchBar.placeholder = "Enter Zip Code/city.."
-        self.navigationItem.titleView = searchBar
+        self.navigationItem.titleView = searchBar*/
         
     }
 
@@ -189,6 +190,7 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         
         let mainStoryBoard = UIStoryboard(name: "DetailList", bundle: nil)
         let ViewController = mainStoryBoard.instantiateViewController(withIdentifier: "DetailsListVC") as! DetailsListVC
+        ViewController.titleStr = searchItems[indexPath.row] as! String
         self.navigationController?.pushViewController(ViewController, animated: true)
         
     }

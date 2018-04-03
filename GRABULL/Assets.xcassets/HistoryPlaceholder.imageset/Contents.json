@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "stopWatchGray@1x.png",
+      "filename" : "historyPlaceholder.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "stopWatchGray@2x.png",
+      "filename" : "historyPlaceholder-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "stopWatchGray@3x.png",
+      "filename" : "historyPlaceholder-2.png",
       "scale" : "3x"
     }
   ],

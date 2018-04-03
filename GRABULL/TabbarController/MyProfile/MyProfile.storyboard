@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Profile-->
+        <!--Profile-->
         <scene sceneID="OM5-ce-PNc">
             <objects>
                 <viewController storyboardIdentifier="MyProfileVC" id="Bta-Wb-1t7" customClass="MyProfileVC" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                                             <action selector="EditInfo:" destination="Bta-Wb-1t7" eventType="touchUpInside" id="Dl7-ea-iyF"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subh degital pvt ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-rk-JSl">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shubh Digital Innovation Pvt. Ltd." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-rk-JSl">
                                                         <rect key="frame" x="10" y="5" width="305" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="QDs-EA-V9n"/>
@@ -96,7 +96,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tm-gj-9qd">
                                                         <rect key="frame" x="10" y="10" width="330" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -124,10 +124,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hO-32-28D">
-                                                <rect key="frame" x="0.0" y="185" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="185" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-6v-Tw8">
-                                                        <rect key="frame" x="10" y="10" width="355" height="30"/>
+                                                        <rect key="frame" x="10" y="10" width="355" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -138,22 +138,22 @@
                                                     <constraint firstAttribute="trailing" secondItem="PVV-6v-Tw8" secondAttribute="trailing" constant="10" id="0Kh-vZ-onX"/>
                                                     <constraint firstItem="PVV-6v-Tw8" firstAttribute="leading" secondItem="6hO-32-28D" secondAttribute="leading" constant="10" id="6dv-9d-tNi"/>
                                                     <constraint firstAttribute="bottom" secondItem="PVV-6v-Tw8" secondAttribute="bottom" constant="10" id="HAn-YZ-ljo"/>
-                                                    <constraint firstAttribute="height" constant="50" id="T7T-p8-nWT"/>
+                                                    <constraint firstAttribute="height" constant="45" id="T7T-p8-nWT"/>
                                                     <constraint firstItem="PVV-6v-Tw8" firstAttribute="top" secondItem="6hO-32-28D" secondAttribute="top" constant="10" id="qad-Tm-wGf"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nU5-aG-7w6">
-                                                <rect key="frame" x="0.0" y="236" width="375" height="367"/>
+                                                <rect key="frame" x="0.0" y="231" width="375" height="372"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uwh-0W-yKd">
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="uwh-0W-yKd">
                                                     <size key="itemSize" width="371" height="123"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="50"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="1"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeliveryCell" id="Ji0-XW-1sN" customClass="DeliveryCell" customModule="GRABULL" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="10" width="351" height="164"/>
+                                                        <rect key="frame" x="12" y="0.0" width="351" height="164"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="351" height="164"/>
@@ -197,7 +197,7 @@
                                                     </collectionViewCell>
                                                 </cells>
                                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GTs-cQ-bby">
-                                                    <rect key="frame" x="0.0" y="174" width="375" height="50"/>
+                                                    <rect key="frame" x="0.0" y="164" width="375" height="1"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-hN-YnL">
@@ -272,7 +272,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aRd-Rl-wdA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="VED-7d-W6f" customClass="Profile"/>
+                    <navigationItem key="navigationItem" title="Profile" id="VED-7d-W6f" customClass="Profile"/>
                     <connections>
                         <outlet property="addressCollView" destination="nU5-aG-7w6" id="BSW-oo-thf"/>
                     </connections>

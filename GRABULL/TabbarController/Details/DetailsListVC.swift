@@ -17,12 +17,13 @@ class DetailsListVC: UIViewController {
 
     
     @IBOutlet weak var detailListCollView: UICollectionView!
-    
+    var titleStr = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = titleStr
         // Do any additional setup after loading the view.
     }
 
@@ -73,7 +74,7 @@ extension DetailsListVC:UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let padding: CGFloat = 10
+        let padding: CGFloat = 1
         let collectionCellSize = collectionView.frame.size.width - padding
         var height = collectionView.frame.size.height
         height = 140.0

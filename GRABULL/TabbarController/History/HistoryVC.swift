@@ -97,7 +97,7 @@ extension HistoryVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let padding: CGFloat = 10
+        let padding: CGFloat = 1
         let collectionCellSize = collectionView.frame.size.width - padding
         var height = collectionView.frame.size.height
         height = 140.0

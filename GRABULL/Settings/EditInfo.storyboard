@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Edit InfoVC-->
+        <!--Edit Profile-->
         <scene sceneID="Amy-ip-za7">
             <objects>
                 <viewController storyboardIdentifier="EditInfoVC" id="8fb-0N-pte" customClass="EditInfoVC" customModule="GRABULL" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,10 +20,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NYm-KO-0Pq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="mgg-mR-3CI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osF-th-kNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="170"/>
+            <point key="canvasLocation" x="688.79999999999995" y="169.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ac-GT-glQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vDW-GV-rUV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="diI-rJ-I9j">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8fb-0N-pte" kind="relationship" relationship="rootViewController" id="xKx-9v-EF2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9M-0q-lyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.39999999999998" y="169.11544227886057"/>
         </scene>
     </scenes>
 </document>

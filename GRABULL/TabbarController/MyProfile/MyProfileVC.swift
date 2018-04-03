@@ -9,6 +9,8 @@
 import UIKit
 import MessageUI
 
+fileprivate let HeaderIdentifier = "Header"
+
 
 class MyProfileVC: UIViewController {
 
@@ -24,7 +26,14 @@ class MyProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
+        // Register XIB for Supplementary View Reuse
+        let XIB = UINib.init(nibName: "ProfileFotter", bundle: Bundle.main)
+        addressCollView.register(XIB, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HeaderIdentifier)
+
+        
+    
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -242,17 +251,39 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // Dequeue Reusable Supplementary View
+        if let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HeaderIdentifier, for: indexPath) as? ProfileFotter {
+            // Configure Supplementary View
+            supplementaryView.backgroundColor = .white
+            //supplementaryView.titleLabel.text = "Section \(indexPath.section)"
+            
+            return supplementaryView
+        }
+        
+        fatalError("Unable to Dequeue Reusable Supplementary View")
+    }
+    
+    
+   /* func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         
         return CGSize(width: self.addressCollView.bounds.width, height: 5.0)
         
     }
     
+     func collectionView(_ collectionView: UICollectionView,
+                                 layout collectionViewLayout: UICollectionViewLayout,
+                                 referenceSizeForFooterInSection section: Int) -> CGSize{
+         return CGSize(width: self.addressCollView.bounds.width, height: 55.0)
+    }*/
     
-    
-    
-    
-    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let headerView = UIView()
+        headerView.frame = CGRect(x: 0, y: 0, width: self.addressCollView.bounds.width, height: 55.0)
+        headerView.backgroundColor = .green
+        return headerView as! UICollectionReusableView
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -268,10 +299,23 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     }
     
     
+   
+    
+    
+    
+   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    
+        
+    }
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let padding: CGFloat = 10
+        let padding: CGFloat = 1
         let collectionCellSize = collectionView.frame.size.width - padding
         var height = collectionView.frame.size.height
         height = 160.0
@@ -281,14 +325,27 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     }
     
     
-   /* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let mainStoryBoard = UIStoryboard(name: "EditAddress", bundle: nil)
-        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "EditAddress") as! EditAddress
-        viewController.editStatus = true
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
-    }*/
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize{
+        return CGSize(width: collectionView.bounds.width, height: 65.0)
+    }
+    
+    
+    
+    
     
 }
 
