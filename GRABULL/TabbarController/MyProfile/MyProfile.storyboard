@@ -152,7 +152,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeliveryCell" id="Ji0-XW-1sN" customClass="DeliveryCell" customModule="GRABULL" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeliveryAddressCell" id="Ji0-XW-1sN" customClass="DeliveryAddressCell" customModule="GRABULL" customModuleProvider="target">
                                                         <rect key="frame" x="12" y="0.0" width="351" height="164"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -173,6 +173,9 @@
                                                                     </constraints>
                                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <state key="normal" image="trashicon"/>
+                                                                    <connections>
+                                                                        <action selector="deleteAddress:" destination="Ji0-XW-1sN" eventType="touchUpInside" id="DYq-w3-PfE"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </view>
@@ -192,7 +195,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <outlet property="txtViewAddress" destination="XTl-xI-G2J" id="rSV-ti-88L"/>
+                                                            <outlet property="btnDelete" destination="oSx-0u-Nhk" id="FKF-9L-TU1"/>
+                                                            <outlet property="txtViewAddress" destination="XTl-xI-G2J" id="epw-JE-RpX"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -201,7 +205,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-hN-YnL">
-                                                            <rect key="frame" x="320" y="0.0" width="55" height="50"/>
+                                                            <rect key="frame" x="320" y="0.0" width="55" height="1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="55" id="msk-ch-go7"/>
                                                             </constraints>
@@ -213,7 +217,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NEW ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK4-rU-XFK">
-                                                            <rect key="frame" x="10" y="10" width="305" height="30"/>
+                                                            <rect key="frame" x="10" y="10" width="305" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>

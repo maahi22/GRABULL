@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol FiltersDelegate {
+    
+    //func filterChanges(_ filterArray : [Filter])
+   // func distanceChanges(_ distance : Double)
+}
+
 class FiltersVC: UIViewController {
 
+    
+     var delegate:FiltersDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -33,6 +33,9 @@
                                     <segment title="CATERING"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentValueChange:" destination="KUq-oG-zhY" eventType="valueChanged" id="8I0-GM-FYX"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IEn-Rk-s0t">
                                 <rect key="frame" x="0.0" y="98" width="375" height="70"/>

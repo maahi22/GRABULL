@@ -35,6 +35,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                     <color key="tintColor" red="0.81568627449999997" green="0.0" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="addNewAddress:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="gJj-YM-iO3"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NEW ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYE-eC-xwH">
                     <rect key="frame" x="10" y="10" width="305" height="45"/>
@@ -70,6 +73,10 @@
                 <constraint firstItem="FYE-eC-xwH" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="10" id="zHD-Tp-5dn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="btnAddAddress" destination="iN0-q5-AwM" id="zCD-db-pkF"/>
+                <outlet property="lblAddAddress" destination="FYE-eC-xwH" id="RB9-SK-HPr"/>
+            </connections>
         </collectionReusableView>
     </objects>
 </document>

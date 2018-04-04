@@ -26,6 +26,15 @@ class EditAddress: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if editStatus {
+            self.title = "Edit Address"
+        }else{
+            self.title = "Add Address"
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

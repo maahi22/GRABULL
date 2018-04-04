@@ -15,7 +15,7 @@ import UIKit
 
 
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController,FiltersDelegate {
 
     
     @IBOutlet weak var gotoCart: UIBarButtonItem!
@@ -173,12 +173,24 @@ class HomeVC: UIViewController {
    
         let mainStoryBoard = UIStoryboard(name: "Filters", bundle: nil)
         let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "FiltersVC") as! FiltersVC
+        viewController.delegate = self
         let navController = UINavigationController(rootViewController: viewController)
         self.present(navController, animated: true) {
             
         }
     
     }
+    
+    
+    
+    
+    @IBAction func segmentValueChange(_ sender: UISegmentedControl) {
+        
+        
+        
+    }
+    
+    
     
 }
 

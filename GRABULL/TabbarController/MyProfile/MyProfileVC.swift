@@ -12,7 +12,7 @@ import MessageUI
 fileprivate let HeaderIdentifier = "Header"
 
 
-class MyProfileVC: UIViewController {
+class MyProfileVC: UIViewController ,ProfileFotterDelegate{
 
     @IBOutlet weak var addressCollView: UICollectionView!
     
@@ -104,10 +104,17 @@ class MyProfileVC: UIViewController {
     }
     
     
-    @IBAction func AddNewAddress(_ sender: Any) {
+    
+    
+    
+    
+    func addNewAddress(){
+        
+        let mainStoryBoard = UIStoryboard(name: "EditAddress", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "EditAddress") as! EditAddress
+        viewController.editStatus = false
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    
 }
 
 /*
@@ -257,6 +264,7 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
         if let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: HeaderIdentifier, for: indexPath) as? ProfileFotter {
             // Configure Supplementary View
             supplementaryView.backgroundColor = .white
+            supplementaryView.delegate = self
             //supplementaryView.titleLabel.text = "Section \(indexPath.section)"
             
             return supplementaryView
@@ -292,7 +300,7 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:DeliveryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DeliveryCell", for: indexPath) as! DeliveryCell
+        let cell:DeliveryAddressCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DeliveryAddressCell", for: indexPath) as! DeliveryAddressCell
         cell.txtViewAddress.text = "1960 W CHELSEA AVE STE 2006R\nALLENTOWN\nPennsylvania\n18104"
         return cell
         
