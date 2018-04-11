@@ -23,6 +23,8 @@
 		0F26537B205EC92900D7E7DA /* CheckoutItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537A205EC92900D7E7DA /* CheckoutItemCell.swift */; };
 		0F26537D205EC95400D7E7DA /* ChekoutTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537C205EC95400D7E7DA /* ChekoutTotalCell.swift */; };
 		0F26537F205EC97500D7E7DA /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26537E205EC97500D7E7DA /* DeliveryCell.swift */; };
+		0F4B2EC7207E792300220794 /* SaveCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B2EC6207E792300220794 /* SaveCard.storyboard */; };
+		0F4B2EC9207E793A00220794 /* SaveCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B2EC8207E793A00220794 /* SaveCardVC.swift */; };
 		0F78B55E20752FB800D17637 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78B55D20752FB800D17637 /* History.swift */; };
 		0F78B5602075314C00D17637 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78B55F2075314C00D17637 /* Filter.swift */; };
 		0FB150FE20752A23007F1FF3 /* DeliveryAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB150FD20752A23007F1FF3 /* DeliveryAddressCell.swift */; };
@@ -120,6 +122,8 @@
 		0F26537A205EC92900D7E7DA /* CheckoutItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemCell.swift; sourceTree = "<group>"; };
 		0F26537C205EC95400D7E7DA /* ChekoutTotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutTotalCell.swift; sourceTree = "<group>"; };
 		0F26537E205EC97500D7E7DA /* DeliveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCell.swift; sourceTree = "<group>"; };
+		0F4B2EC6207E792300220794 /* SaveCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaveCard.storyboard; sourceTree = "<group>"; };
+		0F4B2EC8207E793A00220794 /* SaveCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCardVC.swift; sourceTree = "<group>"; };
 		0F78B55D20752FB800D17637 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		0F78B55F2075314C00D17637 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		0FB150FD20752A23007F1FF3 /* DeliveryAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressCell.swift; sourceTree = "<group>"; };
@@ -277,6 +281,15 @@
 			path = CheckOut;
 			sourceTree = "<group>";
 		};
+		0F4B2EC5207E790700220794 /* Save Card */ = {
+			isa = PBXGroup;
+			children = (
+				0F4B2EC6207E792300220794 /* SaveCard.storyboard */,
+				0F4B2EC8207E793A00220794 /* SaveCardVC.swift */,
+			);
+			path = "Save Card";
+			sourceTree = "<group>";
+		};
 		0F78B55C20752FA200D17637 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +320,7 @@
 		189D6E002057B86200AA7ECA /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
+				0F4B2EC5207E790700220794 /* Save Card */,
 				18C79A762063941A00DDDBDE /* Edit Address */,
 				189D6E272057DA1600AA7ECA /* ResturentMenu */,
 				189D6E322057FC2F00AA7ECA /* AddItem */,
@@ -702,6 +716,7 @@
 				18B9C4C620579555004CEDA5 /* Assets.xcassets in Resources */,
 				0F162521207292A700E26778 /* DetailList.storyboard in Resources */,
 				18C79A7C2063959B00DDDBDE /* AddressList.storyboard in Resources */,
+				0F4B2EC7207E792300220794 /* SaveCard.storyboard in Resources */,
 				18B9C4C120579555004CEDA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,6 +919,7 @@
 				18C79A782063949500DDDBDE /* EditAddress.swift in Sources */,
 				18CC38D6205947A70026A3B2 /* UIColor+KCSColor.swift in Sources */,
 				0F177CBE20583A78006FA4AF /* PaymentTypeVC.swift in Sources */,
+				0F4B2EC9207E793A00220794 /* SaveCardVC.swift in Sources */,
 				189D6DFB20579C3100AA7ECA /* LoginVC.swift in Sources */,
 				0F16251C20728DD200E26778 /* SearchCell.swift in Sources */,
 				18CC38CF2059363F0026A3B2 /* View.swift in Sources */,

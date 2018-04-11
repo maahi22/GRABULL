@@ -115,6 +115,15 @@ class MyProfileVC: UIViewController ,ProfileFotterDelegate{
         viewController.editStatus = false
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    
+    func saveCard(){
+        
+        let mainStoryBoard = UIStoryboard(name: "SaveCard", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "SaveCardVC") as! SaveCardVC
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
 }
 
 /*
@@ -295,7 +304,7 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+        return 1
         
     }
     
@@ -348,7 +357,7 @@ extension MyProfileVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForFooterInSection section: Int) -> CGSize{
-        return CGSize(width: collectionView.bounds.width, height: 65.0)
+        return CGSize(width: collectionView.bounds.width, height: 135.0)
     }
     
     

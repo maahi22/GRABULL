@@ -133,7 +133,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="PVV-6v-Tw8" secondAttribute="trailing" constant="10" id="0Kh-vZ-onX"/>
                                                     <constraint firstItem="PVV-6v-Tw8" firstAttribute="leading" secondItem="6hO-32-28D" secondAttribute="leading" constant="10" id="6dv-9d-tNi"/>

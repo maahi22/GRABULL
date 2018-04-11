@@ -11,6 +11,7 @@ import UIKit
 protocol ProfileFotterDelegate {
     
     func addNewAddress()
+    func saveCard()
 }
 
 class ProfileFotter: UICollectionReusableView {
@@ -33,5 +34,9 @@ class ProfileFotter: UICollectionReusableView {
         
     }
     
+    @IBAction func SaveCard(_ sender: Any) {
+        delegate?.saveCard()
+    
+    }
     
 }
